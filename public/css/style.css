@@ -1,12 +1,52 @@
+html {
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 body {
     background-image: url('image_720.png');
 }
 
 .bgImage {
-height: 800px;
-width: 100%;
-margin-bottom: 25px;
-background-image: url("../images/frontpage_bg.png");
-background-size: cover;
-background-position: center;
+    height: 60rem;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/frontpage_bg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.frontpage_title {
+
+    color: #1365e0;
+    text-align: center;
+    font-family: 'Courgette', Arial, Helvetica, sans-serif;
+    font-size: 3.6rem;
+    font-weight: 600;
+    padding-top: 2.5%;
+    margin-bottom: 0.2rem;
+    margin-left: 0;
+    text-shadow: 2px 2px 2px #7991aa;
+}
+
+.krusty-krab {
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 10rem;
+    font-family: 'Shadows Into Light', 'Gothic Medium', Arial, sans-serif;
+    background: linear-gradient(#ffffff 5%, #ffffff 70%, #fcb3ff 95%);
+    display: flex;
+    width: 36rem;
+    height: 14rem;
+    max-width: 25%;
+    border-radius: 1rem 1rem 8rem 8rem;
+    border: 1px solid #4f729b;
+    box-shadow: 4px 4px 4px #8699af;
+}
+
+.krusty-krab h2 {
+    font-size: 3.2rem;
+    margin: auto;
+    margin-top: 0.8rem;
+    color: #660000;
 }
