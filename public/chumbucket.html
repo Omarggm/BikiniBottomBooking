@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/chumbucket.css">
-    <title>Document</title>
+    <title>The Chum Bucket</title>
 </head>
 <body>
     <header class="chumHeader">
@@ -18,7 +18,7 @@
         <div class="chumSection">
             <h2>CHUM BURGERS</h2>
             <div id="chumburger" class="chumItemBox">
-                <h3>Chum Burger</h3>
+                <h3>CHUM BURGER</h3>
                 <div class="column-section">
                     <div class='wrap-image'>
                         <img class="chumImage" src="./images/chumburger.jpeg" alt="Signature Chum Burger">
@@ -30,18 +30,17 @@
                     </div>
                     <div class="description">
                         <p>
-                            It contains pale beige chum sandwhiched in 
-                            sandwhiched in between a sesame-seed bun. ($10.99)
+                           A delicious Chum Burger ($10.99)
                         </p>
                     </div>
                 </div>
             </div>
         </div>
         <div id="chumfries" class="chumItemBox">
-            <h3>CHUM Fries</h3>
+            <h3>CHUM FRIES</h3>
             <div class="column-section">
                 <div class='wrap-image'>
-                    <img class="chumImage" src="./images/chumfries.webp" alt="Chum">
+                    <img class="chumImage" src="./images/chumfries.webp" alt="Chum Fries">
                 </div>
                 <div class='quantity-box'>
                     <button class='minus' id='minus-box-1' data-number='1'>-</button>
@@ -55,24 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="chumnuggets" class="chumItemBox">
-            <h3>CHUM NUGGETS</h3>
-            <div class="column-section">
-                <div class='wrap-image'>
-                    <img class="chumImage" src="./images/chumnuggets.jpeg" alt="Chum Nuggets">
-                </div>
-                <div class='quantity-box'>
-                    <button class='minus' id='minus-box-2' data-number='2'>-</button>
-                    <div class='style-quantity' id='count-box2' data-number='2'>+</div>
-                </div>
-                <div class="description">
-                    <p>
-                        Small chunks of chum made out of chum fish
-                        organs. ($8.99)
-                    </p>
-                </div>
-            </div>
-        </div>
+
         <div id="chumchili" class="chumItemBox">
             <h3>CHUM CHILI</h3>
             <div class="column-section">
@@ -80,9 +62,9 @@
                     <img class="chumImage" src="./images/chumchili.webp" alt="Chum Chili">
                 </div>
                 <div class='quantity-box'>
-                    <div class='minus' id='minus-box-3' data-number='3'>-</div>
-                    <div class='style-quantity' id='count-box3'>0</div>
-                    <button class='add' id='plus-box-3' data-number='3'>+</button>
+                    <button class='minus' id='minus-box-2' data-number='2'>-</button>
+                    <div class='style-quantity' id='count-box2'>0</div>
+                    <button class='add' id='plus-box-2' data-number='2'>+</button>
                 </div>
                 <div class="description">
                     <p>
@@ -98,9 +80,9 @@
                     <img class="chumImage" src="./images/chumstick.webp" alt="Chum Stick">
                 </div>
                 <div class='quantity-box'>
-                    <div class='minus' id='minus-box-4' data-number='4'>-</div>
-                    <div class='style-quantity' id='count-box4'>0</div>
-                    <button class='add' id='plus-box-4' data-number='4'>+</button>
+                    <button class='minus' id='minus-box-3' data-number='3'>-</button>
+                    <div class='style-quantity' id='count-box3'>0</div>
+                    <button class='add' id='plus-box-3' data-number='3'>+</button>
                 </div>
                 <div class="description">
                     <p>
@@ -115,12 +97,12 @@
                 <h3>CHUM SHAKE</h3>
                 <div class="column-section">
                     <div class='wrap-image'>
-                        <img class="menuImage" src="./images/Kelp-Shake.png" alt="Chum Shake">
+                        <img class="chumImage" src="./images/Kelp-Shake.png" alt="Chum Shake">
                     </div>
                     <div class='quantity-box'>
-                        <button class='minus' id='minus-box-5' data-number='5'>-</button>
-                        <div class='style-quantity' id='count-box5'>0</div>
-                        <button class='add' id='plus-box-5' data-number='5'>+</button>
+                        <button class='minus' id='minus-box-4' data-number='4'>-</button>
+                        <div class='style-quantity' id='count-box4'>0</div>
+                        <button class='add' id='plus-box-4' data-number='4'>+</button>
                     </div>
                     <div class="description">
                         <p>
@@ -146,41 +128,43 @@
                 Estimated Arrival Time: <b>30 minutes</b>.
             </p>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script>
+            $( function shoppingCart() {
+                $( "#dialog" ).dialog({
+                  autoOpen: false,
+                  show: {
+                    effect: "blind",
+                    duration: 1000
+                  },
+                  hide: {
+                    effect: "explode",
+                    duration: 1000
+                  }
+                });
+              
+                $( "#opener" ).on( "click", function shoppingCart() {
+                  $( "#dialog" ).dialog( "open" );
+                });
+                $( "#dialog-2" ).dialog({
+                    autoOpen: false,
+                    show: {
+                      effect: "open",
+                      duration: 500
+                    },
+                    hide: {
+                      effect: "close",
+                      duration: 500
+                    }});
+               
+                  $( "#opener-2" ).on( "click", function() {
+                    $( "#dialog-2" ).dialog( "open" );
+                  });
+              } );
+            </script>
 
     </section>
-    <script>
-        $( function shoppingCart() {
-            $( "#dialog" ).dialog({
-              autoOpen: false,
-              show: {
-                effect: "blind",
-                duration: 1000
-              },
-              hide: {
-                effect: "explode",
-                duration: 1000
-              }
-            });
-          
-            $( "#opener" ).on( "click", function shoppingCart() {
-              $( "#dialog" ).dialog( "open" );
-            });
-            $( "#dialog-2" ).dialog({
-                autoOpen: false,
-                show: {
-                  effect: "open",
-                  duration: 500
-                },
-                hide: {
-                  effect: "close",
-                  duration: 500
-                }});
-           
-              $( "#opener-2" ).on( "click", function() {
-                $( "#dialog-2" ).dialog( "open" );
-              });
-          } );
-        </script>
-        <script src="./js/chumbucket.js"></script>
+    <script src="./js/chumbucket.js"></script>
     </body>
 </html>

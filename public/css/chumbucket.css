@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: SomeTimeLater;
-    src: url("");
+    src: url("../fonts/STL.woff2");
 }
 body{
     background-color: rgba(157, 29, 29, 0.927);
@@ -153,11 +153,6 @@ h3 {
 }
 #chumfries{
     background: url('images/BGpiapl.png') no-repeat;
-    background-size: cover;
-    border-width: 10px;
-}
-#chumnuggets{
-    background: url('images/background-rednorange.jpeg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
