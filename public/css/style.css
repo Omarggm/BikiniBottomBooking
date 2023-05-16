@@ -29,6 +29,12 @@ body {
     text-shadow: 2px 2px 2px #7991aa;
 }
 
+.choice-row {
+    display: inline-block;
+    flex: wrap;
+    width: 100%;
+}
+
 .krusty-krab {
     text-align: center;
     margin-left: 15%;
@@ -49,4 +55,14 @@ body {
     margin: auto;
     margin-top: 0.8rem;
     color: #660000;
+}
+
+.chum-bucket {
+    text-align: center;
+    margin-right: 15%;
+    margin-top: 10rem;
+    width: 36rem;
+    height: 14rem;
+    max-width: 25%;
+    border: 2px solid black;
 }
