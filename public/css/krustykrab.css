@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+/* Header Section */
+
+@font-face {
+    font-family: SomeTimeLater;
+    src: url("");
+}
+body{
+    background-color: rgba(157, 29, 29, 0.927);
+    font-family: SomeTimeLater;
+}
+
+.menuHeader {
+    background: url('images/background-rednorange.jpeg') no-repeat bottom center/cover;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.format-header {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding:2%;
+    font-size:30px;
+    color:black;
+
+}
+
+.homeButton {
+    text-align: center;
+    color: black;
+    border-radius: 20px;
+    padding:5px;
+    margin:14px;
+    width: 50%;
+    background-color: rgba(255, 255, 0, 0.324);
+}
+
+
+
+/* Menu Body Section */
+
+body {
+    min-height:100vh;
+    width:100%;
+}
+
+h2 {
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+h3 {
+    position:relative;
+    bottom:30px;
+    font-size:30px;
+    margin:10px 0px 30px;
+}
+
+.list-items {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    
+}
+
+.description {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    align-items: center;
+    border: 2px solid black;
+    display:flex;
+    flex-direction:row;
+    position:relative;
+    padding:50px;
+    width:100%;
+    margin-top:50px;
+    background-color: rgba(202, 214, 214, 0.63);
+}
+
+.wrap-image {
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+
+.menuImage {
+    width:310px;
+    height:250px;
+    border:4px solid black;
+    box-shadow: 0 0 15px 5px;
+}
+
+.column-section {
+    display:flex;
+    flex-direction:column;
+    align-items: center;  /*key section to adjust the column direction*/
+    
+
+}
+
+.menuItemBox {
+    border:2px solid black;
+    padding:50px;
+
+}
+
+
+.style-section {
+    padding-left:290px; /*Adjusts the outside padding of the order section*/
+    padding-right:290px;
+    
+}
+
+
+
+.menuSection {
+    margin-top:90px;
+}
+.quantity-box {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    position:relative;
+    margin-top:40px;
+    width:15%;
+}
+.minus,
+.add {
+    width:100px;
+    height:50px;
+}
+.style-quantity {
+    font-size:40px;
+    background-color: azure;
+    padding-left:10px;
+    padding-right:10px;
+
+}
+#krabbypatty{
+    background: url('images/background-rednorange.jpeg') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+}
+#krabbypatty2{
+    background: url('images/BGpiapl.png') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+}
+#krabbypatty3{
+    background: url('images/background-rednorange.jpeg') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+}
+#krabbypatty4{
+    background: url('images/BGpiapl.png') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+}
+
+#interoceanicitems{
+    background: url('images/background-rednorange.jpeg') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+}
+#interoceanicitems2{
+    background: url('images/BGpiapl.png') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+}
+
+#beverages{
+    background: url('images/background-rednorange.jpeg') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+}
+#beverages2{
+    background: url('images/BGpiapl.png') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+}
+#opener-2{
+    font-size: 15px;
+    border-width: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+}
+#opener{
+    font-size: 30px;
+    border-width: 5px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.modalBox li{
+    padding: 10px;
+}
+
+.modalBox p{
+    padding: 10px;
+}
+
+
+/* Modal Section */
+
+.displayList {
+    text-align: left;
+    position:relative;
+    left:20px;
+}
+
+.modalBox{
+    background: url('images/BGpretty.jpeg') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+    margin: 10px;
+    border: 2px solid black;
+}
+.opener{
+    background: url('images/BGpretty.jpeg') no-repeat;
+    background-size: cover;
+    border-width: 10px;
+    margin: 10px;
+    text-align: center;
+    width:150px;
+    height:60px;
+    position:fixed;
+    bottom:90px;
+    left:20px;
+
+}
+
+.ui-dialog {
+    background: url('images/BGpretty.jpeg') no-repeat;
+    text-align: center;
+    font-size:23px;
+    padding:15px;
+    position:fixed;
+
+}
