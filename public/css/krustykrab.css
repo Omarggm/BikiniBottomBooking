@@ -136,6 +136,7 @@ h3 {
 }
 .minus,
 .add {
+    font-size: 30px;
     width:100px;
     height:50px;
 }
