@@ -3,10 +3,6 @@ html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body {
-    background-image: url('image_720.png');
-}
-
 .bgImage {
     /* height: 100%; */
     width: 99%;
@@ -23,8 +19,8 @@ body {
     height: 3.6rem;
     width: 101%;
     background: linear-gradient(0.515turn, #ebff39, rgba(90, 137, 178, 0) 12%),
-                linear-gradient(0.58turn, #ebff39, rgba(90, 137, 178, 0) 11%),
-                linear-gradient(#4b83b4, #5a89b2, #aed1ef);
+        linear-gradient(0.58turn, #ebff39, rgba(90, 137, 178, 0) 11%),
+        linear-gradient(#4b83b4, #5a89b2, #aed1ef);
     opacity: 0.875;
     border-bottom: 2px solid #525252;
 }
@@ -65,6 +61,18 @@ body {
     /* margin-left: 6rem;
     margin-right: 0rem; */
     text-shadow: 2px 2px 2px #69839e, 4px 4px 4px #829ebd;
+    opacity: 0;
+    animation: appear 3.2s ease forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Not currently used */
@@ -92,7 +100,18 @@ body {
     background: linear-gradient(0.45turn, #377ca1 5%, #a2d2eb, #f4f9fc);
     border: 1px solid #53717a;
     border-radius: 1.5rem;
-    opacity: 0.9;
+    opacity: 0;
+    animation: appear 2.2s ease forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.9;
+    }
 }
 
 .input-fields-column {
@@ -103,16 +122,16 @@ body {
 
 .login-field {
     background: #f2f5f6;
-   font-size: 1.2rem;
-   width: fit-content;
-   min-width: 18rem;
-   /* position: absolute; */
-   margin-left: 2rem;
-   border-radius: 0.4rem;
-   border: 1px solid #4e5761;
-   padding-left: 0.75rem;
-   padding-bottom: 0.2rem;
-   margin-top: 0.75rem;
+    font-size: 1.2rem;
+    width: fit-content;
+    min-width: 18rem;
+    /* position: absolute; */
+    margin-left: 2rem;
+    border-radius: 0.4rem;
+    border: 1px solid #4e5761;
+    padding-left: 0.75rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.75rem;
 }
 
 .login-field:hover {
@@ -139,7 +158,7 @@ body {
 
 
 .button-row {
-    margin-top: 0.5rem; 
+    margin-top: 0.5rem;
     margin-left: 2rem;
 }
 
@@ -169,7 +188,7 @@ body {
     font-size: 1.2rem;
     background: linear-gradient(#e4ad16, #f7e867);
     width: fit-content;
-    min-width: 5rem;    
+    min-width: 5rem;
     align-self: center;
     margin-left: 0.2rem;
     border-radius: 0.35rem;
@@ -190,7 +209,8 @@ body {
     flex-direction: row;
 }
 
-.password-forgot, .password-click-here {
+.password-forgot,
+.password-click-here {
     margin-left: 0.3rem;
     font-size: 0.9rem;
     margin-top: 0.25rem;
@@ -235,13 +255,15 @@ body {
     border: 1px solid #4f729b;
     box-shadow: 3px 3px 3px #8699af;
     opacity: 0;
-    animation: appear 1s ease forwards;
+    animation: appear 1.4s ease forwards;
 }
 
 @keyframes appear {
     from {
         opacity: 0;
-    } to {
+    }
+
+    to {
         opacity: 1;
     }
 }
@@ -283,13 +305,15 @@ body {
     border-style: ridge;
     border-radius: 0 0 3rem 3rem;
     box-shadow: 3px 4px 4px #647589;
-    animation: appear 6s ease forwards;
+    animation: appear 1.4s ease forwards;
 }
 
 @keyframes appear {
     from {
         opacity: 0;
-    } to {
+    }
+
+    to {
         opacity: 1;
     }
 }
@@ -310,7 +334,7 @@ body {
     border-style: ridge;
     color: #911631;
     text-shadow: 0 0 1 px #64112d, 0 0 2px #64112d, 0 0 4px #64112d, 0 0 6px #64112d;
-    box-shadow: 3px 4px 4px #647589, 1 2 6px #647589,  2 3 8px #7e858d;
+    box-shadow: 3px 4px 4px #647589, 1 2 6px #647589, 2 3 8px #7e858d;
     text-decoration: none;
 }
 
@@ -319,8 +343,220 @@ body {
     text-shadow: 0 0 1px black, 0 0 2px black, 0 0 4px black, 0 0 6px black, 0 0 8px rgb(75, 75, 75);
 }
 
-#theCB{
+#theCB {
     font-size: 2rem;
     line-height: 3rem;
     margin-top: 0.8rem;
+}
+
+
+/* Sign-Up pop-up modal stuff */
+
+/* #signUpTile {
+    display: none;
+} */
+
+.signup-popup {
+    display: hidden;
+    position: fixed;
+    padding-top: 15rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #06244459;
+}
+
+
+.sign-up-message {
+    line-height: 1.5rem;
+    background: linear-gradient(0.48turn, #87b1e9, #f4f9fd);
+    border-radius: 15px;
+    margin: auto;
+    padding: 1.75rem 2rem 1rem 2rem;
+    border: 4px solid #5a6164;
+    width: 30rem;
+    height: 16.5rem;
+    justify-content: space-around;
+}
+
+.sign-up-message p {
+    text-align: center;
+    color: #2a2a2e;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px #b9cde6;
+    margin-bottom: 0.75rem;
+}
+
+.signup-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sign-up-username-field,
+.sign-up-email-field,
+.sign-up-password-field {
+    background: #f6fafb;
+    font-size: 1rem;
+    line-height: 1.35rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+.sign-up-username-field:hover,
+.sign-up-email-field:hover,
+.sign-up-password-field:hover {
+    background: #ffffff;
+}
+
+.sign-up-submit-btn {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(#66b7d2, lightblue);
+    border: 2px solid #4f729b;
+    border-radius: 0.9rem;
+    padding: 0.2rem 0.2rem 0.4rem 0.2rem;
+    margin-top: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6rem;
+}
+
+.sign-up-submit-btn:hover {
+    color: #e9f6fa;
+    background: linear-gradient(#66b7d2, #5c85b3);
+    border: 3px solid #414b57;
+    text-shadow: 0 0 2px #5c85b3;
+    padding: 0.2rem 0.25rem 0.4rem 0.25rem;
+    box-shadow: 2px 2px 2px #6d8db1;
+}
+
+/* The Close Button */
+.close-popup {
+    color: #828c9c;
+    float: right;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: -1.15rem;
+    margin-right: -1.15rem;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+    color: #42464b;
+    text-shadow: 0 0 1px #708090, 1px 1px 1px #708090;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pw-retrieval-popup {
+    display: hidden;
+    position: fixed;
+    padding-top: 15rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #06244459;
+}
+
+.password-retrieve-message {
+    line-height: 1.5rem;
+    background: linear-gradient(0.48turn, #e3e987, #fcfdf4);
+    border-radius: 15px;
+    margin: auto;
+    padding: 1.25rem 1.75rem 1rem 1.75rem;
+    border: 4px solid #64645a;
+    width: 30rem;
+    height: 14rem;
+    justify-content: space-around;
+}
+
+.password-retrieve-message p {
+    text-align: center;
+    color: #202021;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px #b9cde6;
+    margin-bottom: 0.75rem;
+}
+
+.password-retrieve-message h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #001a8c;
+    text-shadow: 2px 2px 2px #9fa078;
+}
+
+
+.pw-retrieval-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pw-retrieval-email-field {
+    background: #f6fafb;
+    font-size: 1.5rem;
+    width: 16rem;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    margin-top: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pw-retrieval-email-field:hover {
+    background: #ffffff;
+}
+
+.pw-retrieval-submit-btn {
+    font-size: 1.4rem;
+    font-weight: 600;
+    background: linear-gradient(#e9e966, #f7f7d4);
+    border: 2px solid #4f729b;
+    border-radius: 0.9rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2.75rem;
+    width: 6rem;
+}
+
+.pw-retrieval-submit-btn:hover {
+    color: #171710;
+    background: linear-gradient(#fbfb51, #e3e39b);
+    border: 3px solid #414b57;
+    text-shadow: 0 0 2px #5c85b3;
+    padding: 0.2rem 0.25rem 0.4rem 0.25rem;
+    box-shadow: 2px 2px 2px #6d8db1;
+}
+
+
+.close-pw-popup {
+    color: #828c9c;
+    float: right;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: -1.15rem;
+    margin-right: -1.15rem;
+}
+
+.close-pw-popup:hover,
+.close-pw-popup:focus {
+    color: #42464b;
+    text-shadow: 0 0 1px #708090, 1px 1px 1px #708090;
+    text-decoration: none;
+    cursor: pointer;
 }

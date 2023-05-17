@@ -17,6 +17,7 @@
 </head>
 <header>
     <div class="navbar">
+        <!-- not currentl used -->
         <h3 class="pineapple-icon">🍍</h3>
     </div>
 
@@ -36,8 +37,8 @@
 
         <div class="frontpage-input-tile">
             <div class="input-fields-column">
-                <input type="text" placeholder="login with email" class="login-field">
-                <input type="text" placeholder="password" class="password-field">
+                <input type="text" placeholder="🌴 login with email" class="login-field">
+                <input type="text" placeholder="🦀 password" class="password-field">
                 <div class="button-row">
                     <button class="login-button">Login</button>
                     <button class="sign-up-button">Sign Up</button>
@@ -51,9 +52,7 @@
         </div>
     </div>
 
-
-
-
+    <!-- Restaurant Fancy Tile Links Here -->
     <div id="restaurant-choice" class="row">
         <a href="krustykrab.html" class="krusty-krab">
             <h2>The<br><strong>Krusty<br>Krab</strong></h2>
@@ -66,9 +65,37 @@
         </a>
     </div>
 
+    <!-- Pop Up Modal Stuff for Signing Up Here -->
+    
+    <div id="signUpTile" class="signup-popup">
 
+        <div class="sign-up-message">
+            <div class="close-popup"> ✕</div>
+            <p>Sign Up Today! Please Enter Your Email</p>
+            <div class="signup-column">
+            <input type="text" class="sign-up-username-field" placeholder="🦞 please enter a username" />
+            <input type="email" class="sign-up-email-field" placeholder="🍍 enter your email" />
+            <input type="password" class="sign-up-password-field" placeholder="🦑 enter a password" />
+            <button class="sign-up-submit-btn">Submit</button>
+            </div>
+        </div>
+    </div>
 
+    <div id="passwordRetrieveTile" class="pw-retrieval-popup">
 
+        <div class="password-retrieve-message">
+            <div class="close-pw-popup"> ✕</div>
+            <p>Please Enter Your Email<br>to Retrieve Your Password</p>
+            <h4>/!\This Feature is for/!\<br>Future Development</h4>
+            <div class="pw-retrieval-row">
+            <input type="email" class="pw-retrieval-email-field" placeholder="🦐 enter your email" />
+            <button class="pw-retrieval-submit-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>
