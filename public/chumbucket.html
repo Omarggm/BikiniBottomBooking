@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/chumbucket.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?">
+    <title>The Chum Bucket</title>
+</head>
+<body>
+    <header class="chumHeader">
+        <div class="format-header">
+            <h1>The Chum Bucket</h1>
+            <a href="index.html" class="homeButton">HOME</a>
+        </div>
+    </header>
+    <section class='style-section'>
+        <div class="chumSection">
+            <h2>CHUM BURGERS</h2>
+            <div id="chumburger" class="chumItemBox">
+                <h3>CLASSIC CHUM BURGER</h3>
+                <div class="column-section">
+                    <div class='wrap-image'>
+                        <img class="chumImage" src="./images/chumburger.jpeg" alt="Signature Chum Burger">
+                    </div>
+                    <div class='quantity-box'>
+                        <button class='minus' id='minus-box-0' data-number='0'>-</button>
+                        <div class='style-quantity' id='count-box0'>0</div>
+                        <button class='add' id='plus-box-0' data-number='0'>+</button>
+                    </div>
+                    <div class="description">
+                        <p>
+                           A delicious Chum Burger ($10.99)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="chumfries" class="chumItemBox">
+            <h3>CHUM FRIES</h3>
+            <div class="column-section">
+                <div class='wrap-image'>
+                    <img class="chumImage" src="./images/chumfries.webp" alt="Chum Fries">
+                </div>
+                <div class='quantity-box'>
+                    <button class='minus' id='minus-box-1' data-number='1'>-</button>
+                    <div class='style-quantity' id='count-box1'>0</div>
+                    <button class='add' id='plus-box-1' data-number='1'>+</button>
+                </div>
+                <div class="description">
+                    <p>
+                        Chum fries made out of chum fish ($5.99)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="chumchili" class="chumItemBox">
+            <h3>CHUM CHILI</h3>
+            <div class="column-section">
+                <div class='wrap-image'>
+                    <img class="chumImage" src="./images/chumchili.webp" alt="Chum Chili">
+                </div>
+                <div class='quantity-box'>
+                    <button class='minus' id='minus-box-2' data-number='2'>-</button>
+                    <div class='style-quantity' id='count-box2'>0</div>
+                    <button class='add' id='plus-box-2' data-number='2'>+</button>
+                </div>
+                <div class="description">
+                    <p>
+                        Chum fish with special chili ($10.00)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="chumstick" class="chumItemBox">
+            <h3>CHUM STICK</h3>
+            <div class="column-section">
+                <div class='wrap-image'>
+                    <img class="chumImage" src="./images/chumstick.webp" alt="Chum Stick">
+                </div>
+                <div class='quantity-box'>
+                    <button class='minus' id='minus-box-3' data-number='3'>-</button>
+                    <div class='style-quantity' id='count-box3'>0</div>
+                    <button class='add' id='plus-box-3' data-number='3'>+</button>
+                </div>
+                <div class="description">
+                    <p>
+                        A delicious chum stick ($10.00)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="chumSection">
+            <h2>BEVERAGES</h2>
+            <div id="beverages" class="chumItemBox">
+                <h3>CHUM SHAKE</h3>
+                <div class="column-section">
+                    <div class='wrap-image'>
+                        <img class="chumImage" src="./images/Kelp-Shake.png" alt="Chum Shake">
+                    </div>
+                    <div class='quantity-box'>
+                        <button class='minus' id='minus-box-4' data-number='4'>-</button>
+                        <div class='style-quantity' id='count-box4'>0</div>
+                        <button class='add' id='plus-box-4' data-number='4'>+</button>
+                    </div>
+                    <div class="description">
+                        <p>
+                            Don't be fulled this is not a the same as the
+                            Kelp shake. ($7.99)
+                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Modal placeholder (Subject to Change) -->
+        <div class="modalBox" id="dialog" title="Your Cart Items">
+            <ul class='displayList'>
+            </ul>
+            <button id="opener-2">Confirm Order</button>
+        </div>
+                 
+        <button class="opener" id="opener"><img src="https://img.icons8.com/small/32/000000/shopping-cart.png"/></button>
+                
+        <div class="modalBox" id="dialog-2" title="Order Complete!">
+            <p>Your order has been submitted.</p>
+            <p>
+                Estimated Arrival Time: <b>30 minutes</b>.
+            </p>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        <script>
+            $( function shoppingCart() {
+                $( "#dialog" ).dialog({
+                  autoOpen: false,
+                  show: {
+                    effect: "blind",
+                    duration: 1000
+                  },
+                  hide: {
+                    effect: "explode",
+                    duration: 1000
+                  }
+                });
+              
+                $( "#opener" ).on( "click", function shoppingCart() {
+                  $( "#dialog" ).dialog( "open" );
+                });
+                $( "#dialog-2" ).dialog({
+                    autoOpen: false,
+                    show: {
+                      effect: "open",
+                      duration: 500
+                    },
+                    hide: {
+                      effect: "close",
+                      duration: 500
+                    }});
+               
+                  $( "#opener-2" ).on( "click", function() {
+                    $( "#dialog-2" ).dialog( "open" );
+                  });
+              } );
+            </script>
+
+    </section>
+    <script src="./js/chumbucket.js"></script>
+    </body>
+</html>
