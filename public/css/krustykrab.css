@@ -9,15 +9,15 @@
 
 @font-face {
     font-family: SomeTimeLater;
-    src: url("");
+    src: url("../fonts/STL.woff2");
 }
 body{
-    background-color: rgba(157, 29, 29, 0.927);
+    background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);
     font-family: SomeTimeLater;
 }
 
 .menuHeader {
-    background: url('images/background-rednorange.jpeg') no-repeat bottom center/cover;
+    background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);
     display:flex;
     flex-direction:row;
     justify-content: center;
@@ -29,13 +29,13 @@ body{
     align-items: center;
     padding:2%;
     font-size:30px;
-    color:black;
+    color: #80604d;
 
 }
 
 .homeButton {
     text-align: center;
-    color: black;
+    color: #80604d;
     border-radius: 20px;
     padding:5px;
     margin:14px;
@@ -147,44 +147,39 @@ h3 {
 
 }
 #krabbypatty{
-    background: url('images/background-rednorange.jpeg') no-repeat;
+    background: url('../images/lightblue-background.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 #krabbypatty2{
-    background: url('images/BGpiapl.png') no-repeat;
+    background: url('../images/lightblue-background.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 #krabbypatty3{
-    background: url('images/background-rednorange.jpeg') no-repeat;
-    background-size: cover;
-    border-width: 10px;
-}
-#krabbypatty4{
-    background: url('images/BGpiapl.png') no-repeat;
+    background: url('../images/lightblue-background.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 
 #interoceanicitems{
-    background: url('images/background-rednorange.jpeg') no-repeat;
+    background: url('../images/lightblue-background.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 #interoceanicitems2{
-    background: url('images/BGpiapl.png') no-repeat;
+    background: url('../images/lightblue-background.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 
 #beverages{
-    background: url('images/background-rednorange.jpeg') no-repeat;
+    background: url('../images/lightblue-background.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 #beverages2{
-    background: url('images/BGpiapl.png') no-repeat;
+    background: url('../images/lightblue-background.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
@@ -220,14 +215,14 @@ h3 {
 }
 
 .modalBox{
-    background: url('images/BGpretty.jpeg') no-repeat;
+    background: url('../images/bikinibottom.jpeg') no-repeat;
     background-size: cover;
     border-width: 10px;
     margin: 10px;
     border: 2px solid black;
 }
 .opener{
-    background: url('images/BGpretty.jpeg') no-repeat;
+    background: url('../images/bikinibottom.jpeg') no-repeat;
     background-size: cover;
     border-width: 10px;
     margin: 10px;
@@ -241,7 +236,7 @@ h3 {
 }
 
 .ui-dialog {
-    background: url('images/BGpretty.jpeg') no-repeat;
+    background: url('../images/bikinibottom.jpeg') no-repeat;
     text-align: center;
     font-size:23px;
     padding:15px;

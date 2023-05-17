@@ -17,9 +17,10 @@ body{
 }
 
 .chumHeader {
-    background: url('images/background-rednorange.jpeg') no-repeat bottom center/cover;
-    display:flex;
-    flex-direction:row;
+    background: url('../images/chumbucket.jpg') no-repeat bottom center/cover;
+    background-position: 0%;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -30,17 +31,19 @@ body{
     padding:2%;
     font-size:30px;
     color:black;
+    text-shadow: 3px 3px 3px lightgray;
 
 }
 
 .homeButton {
     text-align: center;
     color: black;
+    text-shadow: 3px 3px 3px lightgray;
     border-radius: 20px;
     padding:5px;
     margin:14px;
     width: 50%;
-    background-color: rgba(255, 255, 0, 0.324);
+    background-color: rgba(252, 25, 0, 0.425);
 }
 
 
@@ -147,27 +150,27 @@ h3 {
 
 }
 #chumburger{
-    background: url('images/background-rednorange.jpeg') no-repeat;
+    background: url('../images/chumbucket.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 #chumfries{
-    background: url('images/BGpiapl.png') no-repeat;
+    background: url('../images/chumbucket.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 #chumchili{
-    background: url('images/BGpiapl.png') no-repeat;
+    background: url('../images/chumbucket.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 #chumstick{
-    background: url('images/BGpiapl.png') no-repeat;
+    background: url('../images/chumbucket.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
 #beverages{
-    background: url('images/background-rednorange.jpeg') no-repeat;
+    background: url('../images/chumbucket.jpg') no-repeat;
     background-size: cover;
     border-width: 10px;
 }
@@ -203,14 +206,14 @@ h3 {
 }
 
 .modalBox{
-    background: url('images/BGpretty.jpeg') no-repeat;
+    background: linear-gradient(0.4turn, #4e4e4e 20%, #d4d4d4 70%, #808080 98%);
     background-size: cover;
     border-width: 10px;
     margin: 10px;
     border: 2px solid black;
 }
 .opener{
-    background: url('images/BGpretty.jpeg') no-repeat;
+    background: linear-gradient(0.4turn, #4e4e4e 20%, #d4d4d4 70%, #808080 98%);
     background-size: cover;
     border-width: 10px;
     margin: 10px;
@@ -224,7 +227,7 @@ h3 {
 }
 
 .ui-dialog {
-    background: url('images/BGpretty.jpeg') no-repeat;
+    background: linear-gradient(0.4turn, #4e4e4e 20%, #d4d4d4 70%, #808080 98%);
     text-align: center;
     font-size:23px;
     padding:15px;
