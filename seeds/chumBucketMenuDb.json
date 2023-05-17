@@ -1,0 +1,21 @@
+[
+    {
+      "menu_id": 1,
+      "item_name": "Chum Burger",
+      "item_description": "A delicious burger",
+      "item_price": 10.99
+    },
+    {
+      "menu_id": 2,
+      "item_name": "Chum Fries",
+      "item_description": "Fries made from chum",
+      "item_price": 5.99
+    },
+    {
+      "menu_id": 3,
+      "item_name": "Chum Shake",
+      "item_description": "A delicious shake",
+      "item_price": 7.99
+    }
+  ]
+  
