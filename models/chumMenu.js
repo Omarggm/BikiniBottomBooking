@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
 // commented out because it is no longer being called in new format.
 // const User = require('./User');
