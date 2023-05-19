@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const chumSeeds = require('../../../seeds/chumBucketMenuDb.json');
+const { chumMenu } = require('../../../models');
 
 router.get('/', async (req, res) => {
   try {
-    const chumMenu = await chumSeeds.findAll();
-    res.status(200).json(chumMenu);
+    const chumData = await chumMenu.findAll();
+    res.status(200).json(chumData);
   } catch (err) {
     res.status(500).json(err);
   }

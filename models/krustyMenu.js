@@ -32,7 +32,7 @@ class krustyMenu extends Model {}
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'krusty_menu',
+        modelName: 'krustyMenu',
     },
     );
 
