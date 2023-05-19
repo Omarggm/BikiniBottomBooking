@@ -76,6 +76,7 @@ h3 {
 
 .description {
     display:flex;
+    font-size: 2rem;
     flex-wrap:wrap;
     flex-direction:row;
     align-items: center;
@@ -114,18 +115,11 @@ h3 {
 .chumItemBox {
     border:2px solid black;
     padding:50px;
-
 }
-
-
 .style-section {
     padding-left:290px; /*Adjusts the outside padding of the order section*/
-    padding-right:290px;
-    
+    padding-right:290px;  
 }
-
-
-
 .chumSection {
     margin-top:90px;
 }
@@ -139,6 +133,7 @@ h3 {
 }
 .minus,
 .add {
+    font-size: 30px;
     width:100px;
     height:50px;
 }

@@ -9,88 +9,89 @@
     <title>Galley Grub</title>
 </head>
     <body>
-        <header class="menuHeader">
-            <div class="format-header">
-                <h1> The Krusty Krab</h1>
-                <a href="index.html" class='homeButton'>HOME</a>
-            </div>
-        </header>
-        <section class='style-section'>
-            <div class="menuSection">
-                <h2>KRABBY PATTIES</h2>
-                <div id="krabbypatty" class="menuItemBox">
-                    <h3>KRABBY PATTY</h3>
+        <div class="krusty-background">
+            <header class="menuHeader">
+                <div class="format-header">
+                    <h1> The Krusty Krab</h1>
+                    <a href="index.html" class='homeButton'>HOME</a>
+                </div>
+            </header>
+            <section class='style-section'>
+                <div class="menuSection">
+                    <h2>KRABBY PATTIES</h2>
+                    <div id="krabbypatty" class="menuItemBox">
+                        <h3>KRABBY PATTY</h3>
+                        <div class="column-section">
+                            <div class='wrap-image'>
+                                <img class="menuImage" src="./images/Krabby-Patty-1.png" alt="Signature Krabby Patty">
+                            </div>
+                            <div class='quantity-box'>
+                                <button class='minus' id='minus-box-0' data-number='0'>-</button>
+                                <div class='style-quantity' id='count-box0'>0</div>
+                                <button class='add' id='plus-box-0' data-number='0'>+</button>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    A delicious burger ($10.99)
+                                </p>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+                <div id="krabbypatty2" class="menuItemBox">
+                    <h3>KRABBY PATTY (WITH CHEESE)</h3>
                     <div class="column-section">
                         <div class='wrap-image'>
-                            <img class="menuImage" src="./images/Krabby-Patty-1.png" alt="Signature Krabby Patty">
+                            <img class="menuImage" src="./images/Krabby-Patty-Cheese.jpg" alt="Krabby Patty With Cheese">
                         </div>
                         <div class='quantity-box'>
-                            <button class='minus' id='minus-box-0' data-number='0'>-</button>
-                            <div class='style-quantity' id='count-box0'>0</div>
-                            <button class='add' id='plus-box-0' data-number='0'>+</button>
+                            <button class='minus' id='minus-box-1' data-number='1'>-</button>
+                            <div class='style-quantity' id='count-box1'>0</div>
+                            <button class='add' id='plus-box-1' data-number='1'>+</button>
+                        </div>
+                        <div class="description">
+                            <p>Same ingredients as the Krabby Patty, but with cheese! ($12.99)</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="krabbypatty3" class="menuItemBox">
+                    <h3>KELP FRIES</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/kelpfries.jpeg" alt="Kelp Fries">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-2' data-number='2'>-</button>
+                            <div class='style-quantity' id='count-box2'>0</div>
+                            <button class='add' id='plus-box-2' data-number='2'>+</button>
                         </div>
                         <div class="description">
                             <p>
-                                A delicious burger ($10.99)
-                            </p>
+                                Fries made from kelp ($5.99)</p>
                         </div>
                     </div>
+                </div>
       
-                </div>
-            </div>
-            <div id="krabbypatty2" class="menuItemBox">
-                <h3>KRABBY PATTY (WITH CHEESE)</h3>
-                <div class="column-section">
-                    <div class='wrap-image'>
-                        <img class="menuImage" src="./images/Krabby-Patty-Cheese.jpg" alt="Krabby Patty With Cheese">
-                    </div>
-                    <div class='quantity-box'>
-                        <button class='minus' id='minus-box-1' data-number='1'>-</button>
-                        <div class='style-quantity' id='count-box1'>0</div>
-                        <button class='add' id='plus-box-1' data-number='1'>+</button>
-                    </div>
-                    <div class="description">
-                        <p>Same ingredients as the Krabby Patty, but with cheese! ($12.99)</p>
-                    </div>
-                </div>
-            </div>
-            <div id="krabbypatty3" class="menuItemBox">
-                <h3>KELP FRIES</h3>
-                <div class="column-section">
-                    <div class='wrap-image'>
-                        <img class="menuImage" src="./images/kelpfries.jpeg" alt="Kelp Fries">
-                    </div>
-                    <div class='quantity-box'>
-                        <button class='minus' id='minus-box-2' data-number='2'>-</button>
-                        <div class='style-quantity' id='count-box2'>0</div>
-                        <button class='add' id='plus-box-2' data-number='2'>+</button>
-                    </div>
-                    <div class="description">
-                        <p>
-                            Fries made from kelp ($5.99)</p>
-                    </div>
-                </div>
-            </div>
-      
-            <div class="menuSection">
-                <h2>INTEROCEANIC ITEMS</h2>
-                <div id="interoceanicitems" class="menuItemBox">
-                    <h3>KRABBY PIZZA</h3>
-                    <div class="column-section">
-                        <div class='wrap-image'>
-                            <img class="menuImage" src="./images/Pizza_Delivery_136.png" alt="Krabby Pizza">
-                        </div>
-                        <div class='quantity-box'>
-                            <button class='minus' id='minus-box-4' data-number='4'>-</button>
-                            <div class='style-quantity' id='count-box4'>0</div>
-                            <button class='add' id='plus-box-4' data-number='4'>+</button>
-                        </div>
-                        <div class="description">
-                            <p>
-                                If undersea burgers aren't your cup of tea, the Krabby Pizza is just the thing for your
-                                crustacious taste buds. Made from a ready to order Krabby Patty, our culinary artists
-                                convert the burger into a dilectable pepperoni pizza. ($11.99)
-                            </p>
+                <div class="menuSection">
+                    <h2>INTEROCEANIC ITEMS</h2>
+                    <div id="interoceanicitems" class="menuItemBox">
+                        <h3>KRABBY PIZZA</h3>
+                        <div class="column-section">
+                            <div class='wrap-image'>
+                                <img class="menuImage" src="./images/Pizza_Delivery_136.png" alt="Krabby Pizza">
+                            </div>
+                            <div class='quantity-box'>
+                                <button class='minus' id='minus-box-4' data-number='4'>-</button>
+                                <div class='style-quantity' id='count-box4'>0</div>
+                                <button class='add' id='plus-box-4' data-number='4'>+</button>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    If undersea burgers aren't your cup of tea, the Krabby Pizza is just the thing for your
+                                    crustacious taste buds. Made from a ready to order Krabby Patty, our culinary artists
+                                    convert the burger into a dilectable pepperoni pizza. ($11.99)
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -156,11 +157,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            
       
-            <div class="menuSection">
-                <h2>BEVERAGES</h2>
-                <div id="beverages" class="menuItemBox">
+                <div class="menuSection">
+                    <h2>BEVERAGES</h2>
+                    <div id="beverages" class="menuItemBox">
                     <h3>DIET DR. KELP</h3>
                     <div class="column-section">
                         <div class='wrap-image'>
@@ -239,7 +240,7 @@
                 <div class="modalBox" id="dialog" title="Your Cart Items">
                     <ul class='displayList'>
                     </ul>
-                    <button id="opener-2">Confirm Order</button>
+                    <button id="opener-2" style="background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);">Confirm Order</button>
                 </div>
                      
                 <button class="opener" id="opener"><img src="https://img.icons8.com/small/32/000000/shopping-cart.png"/></button>
@@ -247,7 +248,7 @@
                 <div class="modalBox" id="dialog-2" title="Order Complete!">
                     <p>Your order has been submitted.</p>
                     <p>
-                        Estimated Arrival Time: <b>30 minutes</b>.
+                        You're order will be ready for pick up<b>30 minutes</b>.
                     </p>
                 </div>
                 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -287,7 +288,8 @@
                       } );
                     </script>
                 
-        </section>        
+            </section>
+        </div>        
         <script src="./js/krustykrab.js"></script>
     </body>
 </html>
