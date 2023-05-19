@@ -84,28 +84,36 @@
                 </div>
             </div>
         </div>
+        {{!-- {{#each menuItems as |item|}} --}}
         <div id="interoceanicitems2" class="menuItemBox">
+            {{!-- <h3>{{item.name}}</h3> FUTURE CHANGE --}}
             <h3>SALAD</h3>
             <div class="column-section">
                 <div class='wrap-image'>
+                    {{!-- <img class="menuImage" src={{item.image}} alt="Fresh Salad"> FUTURE CHANGE --}}
+
                     <img class="menuImage" src="./images/Salad.jpg" alt="Fresh Salad">
+
                 </div>
                 <div class='quantity-box'>
+                    {{!-- <button class='minus' id=`minus-box-${{{item.id}}}` data-number={{item.id}}>-</button> FUTURE CHANGE--}}
                     <button class='minus' id='minus-box-5' data-number='5'>-</button>
                     <div class='style-quantity' id='count-box5'>0</div>
                     <button class='add' id='plus-box-5' data-number='5'>+</button>
                 </div>
                 <div class="description">
                     <p>
+                        {{!-- {{item.description}} --}}
                         Inspired by Mr. Krab's own daughter, Pearl, the Krusty Salad (pronounced Sal-Ad) is the
                         health concious alternative to greasy patties. Made with freshly prepared sea-weed
-                        lettuce
-                        and tomatos. ($14.50)
+                        lettuce and tomatos. 
+                        {{!-- {{item.price}} --}}
+                        ($14.50)
                     </p>
                 </div>
             </div>
         </div>
-
+        {{!-- {{/each}} --}}
         <div id="interoceanicitems" class="menuItemBox">
             <h3>PEAS (IN A CAN) PIE</h3>
             <div class="column-section">
