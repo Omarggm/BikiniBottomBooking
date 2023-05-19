@@ -64,7 +64,7 @@ html {
     min-width: 20rem;
     font-size: 4.5rem;
     font-weight: 600;
-    padding-top: 2%;
+    padding-top: 3rem;
     margin: 0 auto;
     /* margin-left: 6rem;
     margin-right: 0rem; */
@@ -83,14 +83,16 @@ html {
     }
 }
 
+
+
 .frontpage-title:hover {
     transition: 8s;
     color: #115cbf;
     text-shadow: 0 0 1px #0a769a, 0 0 2px #0a769a, 0 0 4px #0a769a,
-     0 0 8px #0a769a, 0 0 12px #0a769a, 0 0 16px #0a769a, 0 0 24px #000000;
+     0 0 8px #0a769a, 0 0 12px #0a769a, 0 0 16px #0a769a, 0 0 24px #49514b,  0 -12px 18px #1c2a22;
     rotate: 18deg;
     cursor: crosshair;
-    padding-top: 0%;
+    margin-top: -2.5rem;
 }
 
 .frontpage-input-tile {
