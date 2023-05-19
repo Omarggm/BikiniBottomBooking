@@ -3,7 +3,8 @@ const router = require('express').Router();
 router.get('/', async (req, res) => {
     try {
     res.render('homepage', {
-        title: 'Bikini Bottom Booking Bonanza!!!'})}
+        title: 'Bikini Bottom Booking Bonanza!!!',
+        loggedIn: req.session.loggedIn})}
     catch (err) {
         res.status(500).json(err);
     }
@@ -15,6 +16,7 @@ router.get('/krustykrab', async (req, res) => {
     res.render('krustykrab', {
         title: 'Krusty Krab',
         menuItems: menuItems,
+        loggedIn: req.session.loggedIn
     })
 }
     catch (err) {
@@ -28,6 +30,7 @@ router.get('/chumbucket', async (req, res) => {
     res.render('chumbucket', {
         title: 'Chum Bucket',
         menuItems: menuItems,
+        loggedIn: req.session.loggedIn
     })}
     catch (err) {
         res.status(500).json(err);
@@ -37,7 +40,8 @@ router.get('/chumbucket', async (req, res) => {
 router.get('/checkout', async (req, res) => {
     try {
     res.render('checkout', {
-        title: 'Checkout'
+        title: 'Galley Grub Checkout',
+        loggedIn: req.session.loggedIn
     })}
     catch (err) {
         res.status(500).json(err);
