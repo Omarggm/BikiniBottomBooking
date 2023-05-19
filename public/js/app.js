@@ -42,3 +42,22 @@ window.onclick = function (event) {
         passwordRetrieveTile.style.display = "none";
     }
 }
+
+let loginUsername = $(".login-field").val();
+let loginPassword = $(".password-field").val();
+const loginBtn = document.querySelectorAll(".login-button")[0];
+
+// attemptLogin function sends a POST request to the server to check if the user exists
+
+
+loginBtn.addEventListener("click", function () {
+    loginUsername = $(".login-field").val();
+    loginPassword = $(".password-field").val()
+    
+    // stops process if nothing is entered
+    if (loginUsername === "" && loginPassword === "") {
+        return;
+    } else {
+        attemptLogin(loginUsername, loginPassword);
+    }
+});
