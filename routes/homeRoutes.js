@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 
 router.get('/krustykrab', async (req, res) => {
     try {
-    res.render('krustykrab')}
+    res.render('krustykrab')} // before this render I need to fetch this information from the database
     catch (err) {
         res.status(500).json(err);
     }

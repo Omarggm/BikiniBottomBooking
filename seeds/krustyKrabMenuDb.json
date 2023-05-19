@@ -1,20 +1,79 @@
 [
   {
     "menu_id": 1,
-    "item_name": "Krabby Patty",
+    "item_name": "KRABBY PATTY",
     "item_description": "A delicious burger",
-    "item_price": 10.99
+    "item_price": 10.99,
+    "category": "KRABBY PATTIES"
   },
   {
     "menu_id": 2,
-    "item_name": "Kelp Fries",
-    "item_description": "Fries made from kelp",
-    "item_price": 5.99
+    "item_name": "KRABBY PATTY (WITH CHEESE)",
+    "item_description": "A delicious burger (with cheese)",
+    "item_price": 12.99,
+    "category": "KRABBY PATTIES"
   },
   {
     "menu_id": 3,
+    "item_name": "KELP FRIES",
+    "item_description": "Fries made from kelp",
+    "item_price": 5.99,
+    "category": "KRABBY PATTIES"
+  },
+  {
+    "menu_id": 4,
+    "item_name": "KRABBY PIZZA",
+    "item_description": "If undersea burgers aren't your cup of tea, the Krabby Pizza is just the thing for your crustacious taste buds.",
+    "item_price": 11.99,
+    "category": "INTEROCEANIC ITEMS"
+  },
+  {
+    "menu_id": 5,
+    "item_name": "SALAD",
+    "item_description": "Inspired by Mr. Krab's own daughter, Pearl, the Krusty Salad (pronounced Sal-Ad) is the health concious alternative to greasy patties.",
+    "item_price": 14.50,
+    "category": "INTEROCEANIC ITEMS"
+  },
+  {
+    "menu_id": 6,
+    "item_name": "PEAS (IN A CAN) PIE",
+    "item_description": "Crafted for a texas-sized apetite, the Peas (In a Can) Pie is an undersea dwellers dry-dream",
+    "item_price": 7.99,
+    "category": "INTEROCEANIC ITEMS"
+  },
+  {
+    "menu_id": 7,
+    "item_name": "SEANUT BRITTLE",
+    "item_description": "If your sweet tooth can not be satiated by Grandma SquarePants' cookies, then look no further.",
+    "item_price": 7.99,
+    "category": "INTEROCEANIC ITEMS"
+  },
+  {
+    "menu_id": 8,
+    "item_name": "DIET DR. KELP",
+    "item_description": "A delicious shake",
+    "item_price": 3.99,
+    "category": "Beverages"
+  },
+  {
+    "menu_id": 9,
+    "item_name": "WATER",
+    "item_description": "Though it may perpetually surround us, the water on tap at the Krusty Crab is sure to quench any thirst.",
+    "item_price": 1.75,
+    "category": "Beverages"
+  },
+  {
+    "menu_id": 10,
     "item_name": "Kelp Shake",
     "item_description": "A delicious shake",
-    "item_price": 7.99
+    "item_price": 7.99,
+    "category": "Beverages"
+  },
+  {
+    "menu_id": 11,
+    "item_name": "TEA",
+    "item_description": "A delicious shake",
+    "item_price": 7.99,
+    "category": "Beverages"
   }
 ]
