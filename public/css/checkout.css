@@ -90,3 +90,65 @@
 }
 
 
+.order-summary-tile {
+    position: relative;
+    background: linear-gradient(0.48turn, #d8c283cc, #fbfbefcc 30%, #fbfbefcc, #efdba5cc 95%);
+    position:relative;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 40rem;
+    width: 40rem;
+    height: fit-content;
+    padding: 2rem;
+    min-width: fit-content;
+    border-radius: 3rem;
+    border: 2px solid #14120d;
+    opacity: 0;
+    animation: appear 2s ease forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.patrick-icon {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    height: 3.75rem;
+}
+
+.patrick-icon:hover {
+    rotate: 1280deg;
+    height: 11.25rem;
+    transition: 6s;
+    top: 0.25rem;
+    right: 0.25rem;
+}
+
+.order-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: -1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #3f3a35;
+    font-family: SomeTimeLater, Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 2px #a8a7a3;
+}
+
+.order-total {
+    position: absolute;
+    font-family: SomeTimeLater, Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px #a8a7a3;
+    bottom: 1rem;
+    left: 1.5rem;
+}
