@@ -16,14 +16,15 @@
     font-family: SomeTimeLater;
 }
 
-.menuHeader {
+.krustymenuHeader {
     background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);
+    background-position: 0%;
     display:flex;
     flex-direction:row;
     justify-content: center;
 }
 
-.format-header {
+.krustyformat-header {
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -33,7 +34,7 @@
 
 }
 
-.homeButton {
+.krustyhomeButton {
     text-align: center;
     color: #80604d;
     border-radius: 20px;
@@ -121,9 +122,6 @@ h3 {
     padding-right:290px;
     
 }
-
-
-
 .menuSection {
     margin-top:90px;
 }
@@ -217,7 +215,7 @@ h3 {
 }
 
 .modalBox{
-    background: url('../images/bikinibottom.jpeg') no-repeat;
+    background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);
     background-size: cover;
     border-width: 10px;
     margin: 10px;
@@ -236,10 +234,8 @@ h3 {
     left:20px;
 
 }
-
-
 .ui-dialog {
-    background: url('../images/bikinibottom.jpeg') no-repeat;
+    background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);
     text-align: center;
     font-size:23px;
     padding:15px;
