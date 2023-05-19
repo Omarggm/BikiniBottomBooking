@@ -1,15 +1,13 @@
 html {
-    position: relative;
+    /* position: relative; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .bgImage {
-    /* height: 100%; */
-    width: 99%;
+    background-size: cover;
+    min-height: 70rem;
+    width: 100%;
     background-image: url("../images/frontpage_bg2c.png");
-    /* background-size: cover; */
-    background-position: unset;
-    /* background-repeat: no-repeat; */
 }
 
 /* #f7f74f */
@@ -17,7 +15,7 @@ html {
 .navbar {
     position: relative;
     height: 3.6rem;
-    width: 101%;
+    /* width: 100%; */
     background: linear-gradient(0.515turn, #ebff39, rgba(90, 137, 178, 0) 12%),
         linear-gradient(0.58turn, #ebff39, rgba(90, 137, 178, 0) 11%),
         linear-gradient(#4b83b4, #5a89b2, #aed1ef);
@@ -28,6 +26,16 @@ html {
 .pineapple-icon {
     margin-left: -0.4rem;
     margin-top: -0.15rem;
+}
+
+.pineapple-icon:hover {
+    transform: rotate(3600deg);
+  
+    transition: 12s;
+    cursor: crosshair;
+    margin-top: 0.75rem;
+    margin-left: 0.25rem;
+    font-size: 4rem;
 }
 
 .title-row-container {
@@ -54,7 +62,7 @@ html {
     text-align: center;
     font-family: 'Courgette', Arial, Helvetica, sans-serif;
     min-width: 20rem;
-    font-size: 4.2rem;
+    font-size: 4.5rem;
     font-weight: 600;
     padding-top: 2%;
     margin: 0 auto;
@@ -75,20 +83,15 @@ html {
     }
 }
 
-/* Not currently used */
-/* .sign-up-field {
-    font-size: 1.2rem;
-    width: fit-content;
-    min-width: 18rem;
-    position: absolute;
-    margin-left: 2.2rem;
-    border-radius: 0.3rem;
-    border: 1px solid #4e5761;
-    padding-left: 0.75rem;
-    padding-bottom: 0.2rem;
-    margin-top: 0.25rem;
-    
-} */
+.frontpage-title:hover {
+    transition: 8s;
+    color: #115cbf;
+    text-shadow: 0 0 1px #0a769a, 0 0 2px #0a769a, 0 0 4px #0a769a,
+     0 0 8px #0a769a, 0 0 12px #0a769a, 0 0 16px #0a769a, 0 0 24px #000000;
+    rotate: 18deg;
+    cursor: crosshair;
+    padding-top: 0%;
+}
 
 
 .frontpage-input-tile {
@@ -102,6 +105,7 @@ html {
     border-radius: 1.5rem;
     opacity: 0;
     animation: appear 2.2s ease forwards;
+    transition: 1.2s;
 }
 
 @keyframes appear {
@@ -251,11 +255,12 @@ html {
     padding-top: 1rem;
     /* margin-left: 15rem; */
     /* margin-top: 4%; */
-    border-radius: 8rem;
+    border-radius: 7.2rem;
     border: 1px solid #4f729b;
     box-shadow: 3px 3px 3px #8699af;
     opacity: 0;
     animation: appear 1.4s ease forwards;
+    transition: 1.8s;
 }
 
 @keyframes appear {
@@ -275,6 +280,7 @@ html {
     color: #911631;
     text-shadow: 0 0 1 px #64112d, 0 0 2px #64112d, 0 0 4px #64112d, 0 0 6px #64112d;
     text-decoration: none;
+    rotate: 360deg;
 }
 
 .krusty-krab h2 {
@@ -306,6 +312,7 @@ html {
     border-radius: 0 0 3rem 3rem;
     box-shadow: 3px 4px 4px #647589;
     animation: appear 1.4s ease forwards;
+    transition: 1.8s;
 }
 
 @keyframes appear {
@@ -336,6 +343,7 @@ html {
     text-shadow: 0 0 1 px #64112d, 0 0 2px #64112d, 0 0 4px #64112d, 0 0 6px #64112d;
     box-shadow: 3px 4px 4px #647589, 1 2 6px #647589, 2 3 8px #7e858d;
     text-decoration: none;
+    rotate: -360deg;
 }
 
 .chum-bucket h2:hover {
