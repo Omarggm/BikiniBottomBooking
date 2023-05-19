@@ -107,6 +107,10 @@ var menuItems = [
       }
   });
   
+  clearEverything.addEventListener("click", function () {
+    localStorage.clear();
+    location.reload();
+  });
   // Put inside the event listener to display orders that returned more than
   // var example = menuItems.filter(m => m.count > 0);
   // var example2 = menuItems.filter(m => m.name === 'Water x');
