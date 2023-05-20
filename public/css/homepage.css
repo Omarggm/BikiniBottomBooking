@@ -38,6 +38,26 @@ html {
     font-size: 4rem;
 }
 
+
+.logoutBtn {
+    font-size: 1.1rem;
+    float: right;
+    color: #ececec;
+    background: linear-gradient(0.35turn, #ff0000, #ff9292);
+    border-radius: 0.5rem;
+    padding-bottom: 0.2rem;
+    border: 1px solid #222222;
+    box-shadow: 0 0 1px transparent;
+}
+
+.logoutBtn:hover {
+    color: #ffffff;
+    background: linear-gradient(0.35turn, #ff1f1f, #ffb7b7);
+    text-shadow: 0 0 1px #ececec, 0 0 2px #ececec, 0 0 3px #ffe1e1;
+    border: 2px solid #4b4747;
+    box-shadow: 2px 2px 2px #4b4747;
+}
+
 .title-row-container {
     width: 100%;
     display: inline-flex;
