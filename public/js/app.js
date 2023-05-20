@@ -122,3 +122,19 @@ signUpSubmitBtn.addEventListener("click", function () {
         attemptSignUp(signUpUsername, signUpEmail, signUpPassword);
     }
 });
+
+// logout function below (I guess that might be kinda obvious though)
+const logout = async () => {
+    const response = await fetch('/api/users/logout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    });
+  
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert("You aren't actually logged in, sir 🦈");
+    }
+  };
+  
+  document.querySelector('.logoutBtn').addEventListener('click', logout);
