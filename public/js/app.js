@@ -46,15 +46,15 @@ window.onclick = function (event) {
 
 const loginBtn = document.querySelectorAll(".login-button")[0];
 const signUpSubmitBtn = document.querySelectorAll(".sign-up-submit-btn")[0];
-const signUpUsername = $(".sign-up-username").val();
-const signUpEmail = $(".sign-up-email").val();
-const signUpPassword = $(".sign-up-password").val();
+const signUpUsername = $(".sign-up-username-field").val();
+const signUpEmail = $(".sign-up-email-field").val();
+const signUpPassword = $(".sign-up-password-field").val();
 
 // attemptSignup function sends a POST request to the server to create a new user
 const attemptSignUp = async () => {
-    const signUpUsername = $(".sign-up-username").val();
-    const signUpEmail = $(".sign-up-email").val();
-    const signUpPassword = $(".sign-up-password").val();
+    const signUpUsername = $(".sign-up-username-field").val();
+    const signUpEmail = $(".sign-up-email-field").val();
+    const signUpPassword = $(".sign-up-password-field").val();
 
     if (signUpUsername && signUpEmail && signUpPassword) {
 
@@ -112,9 +112,9 @@ loginBtn.addEventListener("click", function () {
 });
 
 signUpSubmitBtn.addEventListener("click", function () {
-    const signUpUsername = $(".sign-up-username").val();
-    const signUpEmail = $(".sign-up-email").val();
-    const signUpPassword = $(".sign-up-password").val();
+    const signUpUsername = $(".sign-up-username-field").val();
+    const signUpEmail = $(".sign-up-email-field").val();
+    const signUpPassword = $(".sign-up-password-field").val();
 
     if (signUpUsername === "" || signUpEmail === "" || signUpPassword === "") {
         return;
