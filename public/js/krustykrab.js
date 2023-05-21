@@ -119,3 +119,24 @@ var menuItems = [
   var array = ['love','cute','awesome']
   
   var array2 = [ {name:'cool'}, {type:'awesome'}]
+
+  // howler function for button onclicks
+
+const Howler = require("howler");
+
+function garyMeow() {
+  var sound = new Howl({
+    src: ["./sounds/gary_meow.mp3"],
+    autoplay: true,
+    volume: 1.0,
+  });
+}
+
+function stankNoise() {
+  var sound = new Howl({
+    src: ["./sounds/stank-noise.mp3"],
+    autoplay: true,
+    volume: 1.0,
+  });
+}
+
