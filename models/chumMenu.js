@@ -24,7 +24,11 @@ class ChumMenu extends Model { }
         type: DataTypes.STRING,
         allowNull: false,
       },
+      category: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
+  },
     {
       sequelize,
       timestamps: false,
