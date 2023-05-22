@@ -6,6 +6,7 @@ const path = require('path');
 const sessionConfig = { secret: 'secret'};
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
+const Howler = require('howler');
 
 app.engine('handlebars', hbs.engine);
 app.use(session(sessionConfig));

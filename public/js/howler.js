@@ -1,3 +1,5 @@
+// const Howler = require('howler');
+
 function sadSong() {
     var sound = new Howl({
       src: ["../sounds/sad-song.mp3"],
