@@ -16,7 +16,7 @@
     font-family: SomeTimeLater;
 }
 
-.krustymenuHeader {
+.menuHeader {
     background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);
     background-position: 0%;
     display:flex;

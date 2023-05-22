@@ -3,13 +3,15 @@
     src: url("../fonts/STL.woff2");
 }
 
+
+
 #checkoutBgImage {
     background-image: url("../images/galley-grub-checkout1a.png");
     background-size: cover;
     min-height: 70rem;
     margin-top: -4rem;
     /* background-repeat: no-repeat; */
-    margin-top: 0rem;
+    margin-top: 2rem;
     position: relative;
 }
 

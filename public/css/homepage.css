@@ -14,13 +14,14 @@ html {
 
 .navbar {
     position: relative;
-    height: 3.6rem;
+    height: 5rem;
     /* width: 100%; */
     background: linear-gradient(0.515turn, #ebff39, rgba(90, 137, 178, 0) 12%),
         linear-gradient(0.58turn, #ebff39, rgba(90, 137, 178, 0) 11%),
         linear-gradient(#4b83b4, #5a89b2, #aed1ef);
     opacity: 0.875;
     border-bottom: 2px solid #525252;
+    margin-top: 2rem;
 }
 
 .pineapple-icon {
@@ -30,7 +31,8 @@ html {
 
 .pineapple-icon:hover {
     transform: rotate(3600deg);
-  
+    text-shadow: 0 0 1px #fdffec, 0 0 2px #fdffec, 0 0 4px #fdffec, 0 0 8px #fdffec, 0 0 12px #fdffec, 
+    0 0 16px #fdffec, 0 0 24px #fdffec, 0 0 32px #fdffec, 0 0 40px #fdffec;
     transition: 12s;
     cursor: crosshair;
     margin-top: 0.75rem;
@@ -56,14 +58,18 @@ html {
 
 
 .logoutBtn {
-    font-size: 1.1rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
     float: right;
     color: #ececec;
     background: linear-gradient(0.35turn, #ff0000, #ff9292);
-    border-radius: 0.5rem;
-    padding-bottom: 0.2rem;
+    border-radius: 0.45rem 0.5rem;
+    padding: 0.3rem;
     border: 1px solid #222222;
     box-shadow: 0 0 1px transparent;
+    margin-top: -1rem;
+    margin-left: 0.25rem;
 }
 
 .logoutBtn:hover {
@@ -131,6 +137,7 @@ html {
 }
 
 .frontpage-input-tile {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: 2rem;
     margin-right: 1rem;
     font-size: 1.2rem;
@@ -243,6 +250,7 @@ html {
     text-decoration: none;
 }
 
+
 .password-retrieval-text-row {
     margin-left: 1.7rem;
     display: flex;
@@ -251,6 +259,7 @@ html {
 
 .password-forgot,
 .password-click-here {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-left: 0.3rem;
     font-size: 0.9rem;
     margin-top: 0.25rem;
@@ -396,9 +405,9 @@ html {
 
 /* Sign-Up pop-up modal stuff */
 
-/* #signUpTile {
-    display: none;
-} */
+#signUpTile {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .signup-popup {
     display: hidden;
@@ -500,7 +509,13 @@ html {
     cursor: pointer;
 }
 
+
+#passwordRetrieveTile {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .pw-retrieval-popup {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: hidden;
     position: fixed;
     padding-top: 15rem;
