@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/krustykrab.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?">
+    <title>Galley Grub</title>
+</head>
+    <body>
+        <div class="krusty-background">
+            <header class="krustymenuHeader">
+                <div class="krustyformat-header">
+                    <h1> The Krusty Krab</h1>
+                    <a href="index.html" class='krustyhomeButton'>HOME</a>
+                </div>
+            </header>
+            <section class='style-section'>
+                <div class="menuSection">
+                    <h2>KRABBY PATTIES</h2>
+                    <div id="krabbypatty" class="menuItemBox">
+                        <h3>KRABBY PATTY</h3>
+                        <div class="column-section">
+                            <div class='wrap-image'>
+                                <img class="menuImage" src="./images/Krabby-Patty-1.png" alt="Signature Krabby Patty">
+                            </div>
+                            <div class='quantity-box'>
+                                <button class='minus' id='minus-box-0' data-number='0' onclick="garyMeow()">-</button>
+                                <div class='style-quantity' id='count-box0'>0</div>
+                                <button class='add' id='plus-box-0' data-number='0' onclick="garyMeow()">+</button>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    A delicious burger 
+                                </p>
+                                <span class="shop-item-price">($10.99)</span>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+                <div id="krabbypatty2" class="menuItemBox">
+                    <h3>KRABBY PATTY (WITH CHEESE)</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/Krabby-Patty-Cheese.jpg" alt="Krabby Patty With Cheese">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-1' data-number='1' onclick="garyMeow()">-</button>
+                            <div class='style-quantity' id='count-box1'>0</div>
+                            <button class='add' id='plus-box-1' data-number='1' onclick="garyMeow()">+</button>
+                        </div>
+                        <div class="description">
+                            <p>Same ingredients as the Krabby Patty, but with cheese! </p>
+                            <span class="shop-item-price">($12.99)</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="krabbypatty3" class="menuItemBox">
+                    <h3>KELP FRIES</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/kelpfries.jpeg" alt="Kelp Fries">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-2' data-number='2' onclick="garyMeow()">-</button>
+                            <div class='style-quantity' id='count-box2'>0</div>
+                            <button class='add' id='plus-box-2' data-number='2' onclick="garyMeow()">+</button>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Fries made from kelp </p>
+                                <span class="shop-item-price">($5.99)</span>
+                        </div>
+                    </div>
+                </div>
+      
+                <div class="menuSection">
+                    <h2>INTEROCEANIC ITEMS</h2>
+                    <div id="interoceanicitems" class="menuItemBox">
+                        <h3>KRABBY PIZZA</h3>
+                        <div class="column-section">
+                            <div class='wrap-image'>
+                                <img class="menuImage" src="./images/Pizza_Delivery_136.png" alt="Krabby Pizza">
+                            </div>
+                            <div class='quantity-box'>
+                                <button class='minus' id='minus-box-4' data-number='4' onclick="garyMeow()">-</button>
+                                <div class='style-quantity' id='count-box4'>0</div>
+                                <button class='add' id='plus-box-4' data-number='4' onclick="garyMeow()">+</button>
+                            </div>
+                            <div class="description">
+                                <p>
+                                    If undersea burgers aren't your cup of tea, the Krabby Pizza is just the thing for your
+                                    crustacious taste buds. Made from a ready to order Krabby Patty, our culinary artists
+                                    convert the burger into a dilectable pepperoni pizza. 
+                                </p>
+                                <span class="shop-item-price">($11.99)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="interoceanicitems2" class="menuItemBox">
+                    <h3>SALAD</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/Salad.jpg" alt="Fresh Salad">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-5' data-number='5' onclick="garyMeow()">-</button>
+                            <div class='style-quantity' id='count-box5'>0</div>
+                            <button class='add' id='plus-box-5' data-number='5' onclick="garyMeow()">+</button>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Inspired by Mr. Krab's own daughter, Pearl, the Krusty Salad (pronounced Sal-Ad) is the
+                                health concious alternative to greasy patties. Made with freshly prepared sea-weed
+                                lettuce
+                                and tomatos. 
+                            </p>
+                            <span class="shop-item-price">($14.50)</span>
+                        </div>
+                    </div>
+                </div>
+      
+                <div id="interoceanicitems" class="menuItemBox">
+                    <h3>PEAS (IN A CAN) PIE</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/Peas-In-A-Can.png" alt="Peas in a Can Pie">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-6' data-number='6' onclick="garyMeow()">-</button>
+                            <div class='style-quantity' id='count-box6'>0</div>
+                            <button class='add' id='plus-box-6' data-number='6' onclick="garyMeow()">+</button>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Crafted for a texas-sized apetite, the Peas (In a Can) Pie is an undersea dwellers
+                                dry-dream
+                                made with a newly opened can of peas placed inside a home-made pie. 
+                            </p>
+                            <span class="shop-item-price">($7.99)</span>
+                        </div>
+                    </div>
+                </div>
+      
+                <div id="interoceanicitems2" class="menuItemBox">
+                    <h3>SEANUT BRITTLE</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/Seanut-brittle.png" alt="Seanut Brittle">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-7' data-number='7' onclick="garyMeow()">-</button>
+                            <div class='style-quantity' id='count-box7'>0</div>
+                            <button class='add' id='plus-box-7' data-number='7' onclick="garyMeow()">+</button>
+                        </div>
+                        <div class="description">
+                            <p>
+                                If your sweet tooth can not be satiated by Grandma SquarePants' cookies, then look no
+                                further. Our Seanut Brittle is ordered fresh from the local grocery store. 
+                            </p>
+                            <span class="shop-item-price">($7.99)</span>
+                        </div>
+                    </div>
+                </div>
+            
+      
+                <div class="menuSection">
+                    <h2>BEVERAGES</h2>
+                    <div id="beverages" class="menuItemBox">
+                    <h3>DIET DR. KELP</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/Diet-Dr-Kelp.png" alt="Diet Dr. Kelp">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-8' data-number='8' onclick="garyMeow()">-</button>
+                            <div class='style-quantity' id='count-box8'>0</div>
+                            <button class='add' id='plus-box-8' data-number='8' onclick="garyMeow()">+</button>
+                        </div>
+                        <div class="description">
+                            <p>(Unavailable for Delivery with Krabby Pizza)</p>
+                            <span class="shop-item-price">($3.99)</span>
+                        </div>
+                    </div>
+                </div>
+      
+                <div id="beverages2" class="menuItemBox">
+                    <h3>WATER</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/Water.png" alt="Water">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-9' data-number='9' onclick="garyMeow()">-</button>
+                            <div class='style-quantity' id='count-box9'>0</div>
+                            <button class='add' id='plus-box-9' data-number='9' onclick="garyMeow()">+</button>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Though it may perpetually surround us, the water on tap at the Krusty Crab is sure to
+                                quench
+                                any thirst.
+                            </p>
+                            <span class="shop-item-price">($1.75)</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="beverages" class="menuItemBox">
+                    <h3>KELP SHAKE</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/Kelp-Shake.png" alt="Kelp Shake">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-10' data-number='10' onclick="garyMeow()">-</button>
+                            <div class='style-quantity' id='count-box10'>0</div>
+                            <button class='add' id='plus-box-10' data-number='10' onclick="garyMeow()">+</button>
+                        </div>
+                        <div class="description">
+                            <p>
+                                A delicious shake
+                            </p>
+                            <span class="shop-item-price">($7.99)</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="beverages" class="menuItemBox">
+                    <h3>TEA</h3>
+                    <div class="column-section">
+                        <div class='wrap-image'>
+                            <img class="menuImage" src="./images/Tea.jpg" alt="Fresh Tea">
+                        </div>
+                        <div class='quantity-box'>
+                            <button class='minus' id='minus-box-11' data-number='11' onclick="garyMeow()">-</button>
+                            <div class='style-quantity' id='count-box11'>0</div>
+                            <button class='add' id='plus-box-11' data-number='11' onclick="garyMeow()">+</button>
+                        </div>
+                        <div class="description">
+                            <p>
+                                Shipped directly from above the surface, Krusty Krab tea can be placed in any glass (or
+                                body
+                                of water) to create a refreshing flavor that won't overtake your pallete.
+                            </p>
+                            <span class="shop-item-price">($4.65)</span>
+                        </div>
+                    </div>
+                </div>
+      
+                  <!-- Modal placeholder (Subject to Change) -->
+                <div class="modalBox" id="dialog" title="Your Cart Items">
+                    <ul class='displayList'>
+                    </ul>
+                    <button id="opener-2" style="background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);">Confirm Order</button>
+                </div>
+                     
+                <button onclick="stankNoise()" class="opener" id="opener"><img src="https://img.icons8.com/small/32/000000/shopping-cart.png"/></button>
+                    
+                <div class="modalBox" id="dialog-2" title="Order Complete!">
+                    <p>Your order has been submitted.</p>
+                    <p>
+                        You're order will be ready for pick up in <b>30 minutes</b>.
+                    </p>
+                </div>
+                
+                <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+                <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+        
+                    <script>
+                        
+                    $( function shoppingCart() {
+                        $( "#dialog" ).dialog({
+                          autoOpen: false,
+                          show: {
+                            effect: "blind",
+                            duration: 1000
+                          },
+                          hide: {
+                            effect: "explode",
+                            duration: 1000
+                          }
+                        });
+                      
+                        $( "#opener" ).on( "click", function shoppingCart() {
+                          $( "#dialog" ).dialog( "open" );
+                        });
+                        $( "#dialog-2" ).dialog({
+                            autoOpen: false,
+                            show: {
+                              effect: "open",
+                              duration: 500
+                            },
+                            hide: {
+                                effect: "close",
+                                duration: 500
+                            }});
+                       
+                          $( "#opener-2" ).on( "click", function() {
+                            $( "#dialog-2" ).dialog( "open" );
+                          });
+                      } );
+                    </script>
+                
+            </section>
+        </div>        
+        <script src="./js/krustykrab.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    </body>
+</html>
+    
+      

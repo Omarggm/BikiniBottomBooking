@@ -16,9 +16,9 @@
                 <img class="menuImage" src="./images/{{this.item_image}}" alt="Signature Krabby Patty">
             </div>
             <div class='quantity-box'>
-                <button class="minus" id='minus-box-{{this.menu_id}}' data-number='{{this.menu_id}}'></button>
-                <div class='style-quantity' id='count-box0'>0</div>
-                <button class='add' id='plus-box-0' data-number='0'>+</button>
+                <button class="minus" id='minus-box-{{this.menu_id}}' data-number='{{this.menu_id}}'>-</button>
+                <div class='style-quantity' id='count-box{{this.menu_id}}'>0</div>
+                <button class='add' id='plus-box-{{this.menu_id}}' data-number='0'>+</button>
             </div>
             <div class="description">
                     <p>
@@ -48,7 +48,8 @@
             </p>
         </div>
    
-
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
         <script>
             $(function shoppingCart() {
                 $("#dialog").dialog({
@@ -85,6 +86,4 @@
         </script>
 
 </section>
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 <script src="../models/krustyMenu.js">
