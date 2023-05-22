@@ -51,46 +51,54 @@ const signUpPassword = $(".sign-up-password-field").val();
 
 // attemptSignup function sends a POST request to the server to create a new user
 const attemptSignUp = async () => {
-  const signUpUsername = $(".sign-up-username-field").val();
-  const signUpEmail = $(".sign-up-email-field").val();
-  const signUpPassword = $(".sign-up-password-field").val();
 
-  if (signUpUsername && signUpEmail && signUpPassword) {
-    const signUpResponse = await fetch("/api/users", {
-      method: "POST",
-      body: JSON.stringify({ signUpUsername, signUpEmail, signUpPassword }),
-      headers: { "Content-Type": "application/json" },
-    });
+    const signUpUsername = $(".sign-up-username-field").val();
+    const signUpEmail = $(".sign-up-email-field").val();
+    const signUpPassword = $(".sign-up-password-field").val();
 
-    if (signUpResponse.ok) {
-      // If successful, reloads the page
-      alert("Sign up successful! Please sign in! ⚓");
-    } else {
-      alert("sign up failed, please try again 🦈");
+    if (signUpUsername && signUpEmail && signUpPassword) {
+
+        const signUpResponse = await fetch("/api/users", {
+            method: 'POST',
+            body: JSON.stringify({ signUpUsername, signUpEmail, signUpPassword }),
+            headers: { 'Content-Type': 'application/json' },
+        });
+
+        if (signUpResponse.ok) {
+            // If successful, reloads the page
+            alert("Sign up successful! Please sign in! ⚓")
+            .then(signUpTile.style.display = "none");
+        } else {
+            alert("sign up failed, please try again 🦈");
+        }
     }
   }
 };
 
 // attemptLogin function sends a POST request to the server to check if the user exists
 const attemptLogin = async () => {
-  const loginEmail = $(".login-field").val();
-  const loginPassword = $(".password-field").val();
 
-  if (loginEmail && loginPassword) {
-    const loginResponse = await fetch("/api/users/login", {
-      method: "POST",
-      body: JSON.stringify({ loginEmail, loginPassword }),
-      headers: { "Content-Type": "application/json" },
-    });
+    const email = $(".login-field").val();
+    const password = $(".password-field").val();
 
-    if (loginResponse.ok) {
-      // If successful, reloads the page
-      location.reload();
-    } else {
-      alert("sign in failed, please try again 🦈");
+    if (email && password) {
+
+        const loginResponse = await fetch("/api/users/login", {
+            method: 'POST',
+            body: JSON.stringify({ email, password }),
+            headers: { 'Content-Type': 'application/json' },
+        });
+
+        if (loginResponse.ok) {
+            // If successful, reloads the page
+            location.reload();
+        } else {
+            alert("sign in failed, please try again 🦈");
+        }
     }
   }
 };
+
 
 loginBtn.addEventListener("click", function () {
   const loginEmail = $(".login-field").val();
@@ -104,6 +112,7 @@ loginBtn.addEventListener("click", function () {
     attemptLogin(loginEmail, loginPassword);
   }
 });
+
 
 signUpSubmitBtn.addEventListener("click", function () {
   const signUpUsername = $(".sign-up-username-field").val();
@@ -175,4 +184,13 @@ function squarePants() {
       autoplay: true,
       volume: 1.0,
     });
-  }
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert("You aren't actually logged in, sir 🦈");
+    }
+  };
+
+  document.querySelector('.logoutBtn').addEventListener('click', logout);
+

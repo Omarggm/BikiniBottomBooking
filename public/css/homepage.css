@@ -38,6 +38,22 @@ html {
     font-size: 4rem;
 }
 
+.logged-in-confirm,
+.logged-in-disconfirm {
+    font-family: Courgette, Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+    text-align: center;
+    color: #afdbda;
+}
+
+.logged-in-confirm:hover {
+    color: #e2eead;
+    font-size: 1.4rem;
+    text-shadow: 0 0 1px #e5f0b3, 0 0 2px #e5f0b3, 0 0 3px #e5f0b3;
+    transition: 0.3s;
+}
+
 
 .logoutBtn {
     font-size: 1.1rem;

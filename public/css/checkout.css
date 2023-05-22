@@ -43,7 +43,7 @@
     margin-top: -1rem;
     rotate: -18deg;
     font-size: 4.8rem;
-    text-shadow: 0px 0px 2px #5b645b, 2px 2px 2px #5f665f, 4px 4px 4px #676861,  6px 6px 6px #787a6b;
+    text-shadow: 0px 0px 2px #5b645b, 2px 2px 2px #5f665f, 4px 4px 4px #676861,  6px 6px 6px #b9bda1;
 }
 
 .checkout-homebutton {
@@ -73,15 +73,17 @@
     background: linear-gradient(0.455turn, #22db72,#aaf3ca);
     font-weight: 600;
     border: 4px solid #434843;
-    box-shadow: 2px 2px 2px #4f434b, 4px 4px 4px #6f5f6a,  4px 4px 6px #6e5f6f;
+    /* box-shadow: 2px 2px 2px #4f434b, 4px 4px 4px #6f5f6a,  4px 4px 6px #6e5f6f; */
+    box-shadow: 0 0 1px #fdffec, 0 0 2px #fdffec, 0 0 4px #fdffec, 0 0 8px #fdffec, 0 0 12px #fdffec, 
+    0 0 16px #fdffec, 0 0 24px #fdffec, 0 0 32px #fdffec, 0 0 40px #fdffec;
     left: 2.25rem;
     top: 2.25rem;
     font-size: 2.75rem;
     height: 9rem;
     border-radius: 4.5rem;
     opacity: 1;
-    rotate: 1800deg;
-    transition: 6s;
+    rotate: 2160deg;
+    transition: 7s;
 }
 
 .checkout-homebutton a:hover {
@@ -97,13 +99,13 @@
     margin-top: 1rem;
     margin-right: auto;
     margin-left: auto;
-    min-height: 40rem;
+    min-height: 36rem;
     width: 40rem;
     height: fit-content;
     padding: 2rem;
     min-width: fit-content;
     border-radius: 3rem;
-    border: 2px solid #14120d;
+    border: 3px solid #2e2a1f;
     opacity: 0;
     animation: appear 2s ease forwards;
 }
@@ -136,12 +138,21 @@
 .order-title {
     font-size: 2.5rem;
     text-align: center;
-    margin-top: -1.25rem;
+    margin-top: -0.75rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1.5rem;
     color: #3f3a35;
     font-family: SomeTimeLater, Arial, Helvetica, sans-serif;
     text-shadow: 2px 2px 2px #a8a7a3;
+}
+
+.item-and-price-row {
+    font-family: SomeTimeLater, Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 2% 0 2%;
 }
 
 .order-total {

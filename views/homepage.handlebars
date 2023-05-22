@@ -2,6 +2,11 @@
     <!-- not really used at the moment -->
     <div class="navbar">
         <h3 class="pineapple-icon">🍍</h3>
+        {{#if logged_in}}
+        <h3 class="logged-in-confirm">You Are Logged In!</h3>
+        {{else}}
+        <h3 class="logged-in-disconfirm">logging in has many benefits!</h3>
+        {{/if}}
         <button class="logoutBtn">Logout</button>
     </div>
 
@@ -61,7 +66,7 @@
             </div>
         </div>
     </div>
-    g
+    
     <div id="passwordRetrieveTile" class="pw-retrieval-popup">
 
         <div class="password-retrieve-message">
