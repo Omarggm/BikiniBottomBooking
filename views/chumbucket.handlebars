@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/chumbucket.css">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?">
-    <title>The Chum Bucket</title>
-</head>
-<body>
     <header class="chumHeader">
         <div class="format-header">
             <h1>The Chum Bucket</h1>
@@ -16,109 +5,157 @@
         </div>
     </header>
     <section class='style-section'>
+        {{#each chumburgers as |item|}}
+        {{#if}} (item.category === "CHUM BURGERS")
         <div class="chumSection">
-            <h2>CHUM BURGERS</h2>
+            {{!<h2>CHUM BURGERS</h2>!}}
             <div id="chumburger" class="chumItemBox">
-                <h3>CLASSIC CHUM BURGER</h3>
+                <h3>{{item.name}}</h3>
+                {{!<h3>CLASSIC CHUM BURGER</h3>!}}
                 <div class="column-section">
                     <div class='wrap-image'>
-                        <img class="chumImage" src="./images/chumburger.jpeg" alt="Signature Chum Burger">
+                        <img class="chumImage" src="{{item.image}}" alt="Signature Chum Burge">
+                       {{!<img class="chumImage" src="./images/chumburger.jpeg" alt="Signature Chum Burger">!}}
                     </div>
                     <div class='quantity-box'>
-                        <button class='minus' id='minus-box-0' data-number='0'>-</button>
+                        <button class="minus" id=`minus-box-${{item.id}}` data-number='{{item.id}}'></button>
+                        {{!<button class='minus' id='minus-box-0' data-number='0'>-</button>!}}
                         <div class='style-quantity' id='count-box0'>0</div>
                         <button class='add' id='plus-box-0' data-number='0'>+</button>
                     </div>
                     <div class="description">
                         <p>
-                           A delicious Chum Burger ($10.99)
+                            {{item.description}}
+                           {{!A delicious Chum Burger!}}
+                           {{item.price}}
+                           {{!($10.99)!}}
                         </p>
-                        <button class="check" id="addToCart">ADD TO CART</button>
                     </div>
                 </div>
             </div>
         </div>
+        {{/if}}
+        {{/each}}
+
+        {{#each chumburgers as |item|}}
+        {{#if}} (item.category === "CHUM BURGERS")
         <div id="chumfries" class="chumItemBox">
-            <h3>CHUM FRIES</h3>
+            <h3>{{item.name}}</h3>
+            {{!<h3>CHUM FRIES</h3>!}}
             <div class="column-section">
                 <div class='wrap-image'>
-                    <img class="chumImage" src="./images/chumfries.webp" alt="Chum Fries">
+                    <img class="chumImage" src="{{item.image}}" alt="Chum Fries">
+                    {{!<img class="chumImage" src="./images/chumfries.webp" alt="Chum Fries">!}}
                 </div>
                 <div class='quantity-box'>
-                    <button class='minus' id='minus-box-1' data-number='1'>-</button>
+                    <button class="minus" id=`minus-box-${{item.id}}` data-number='{{item.id}}'></button>
+                    {{!<button class='minus' id='minus-box-1' data-number='1'>-</button>!}}
                     <div class='style-quantity' id='count-box1'>0</div>
                     <button class='add' id='plus-box-1' data-number='1'>+</button>
                 </div>
                 <div class="description">
                     <p>
-                        Chum fries made out of chum fish ($5.99)
+                        {{item.description}}
+                        {{!Chum fries made out of chum fish!}}
+                        {{item.price}}
+                        {{!($5.99)!}}
                     </p>
-                    <button class="check" id="addToCart">ADD TO CART</button>
                 </div>
             </div>
         </div>
+        {{/if}}
+        {{/each}}
 
+        {{#each chumburgers as |item|}}
+        {{#if}} (item.category === "CHUM BURGERS")
         <div id="chumchili" class="chumItemBox">
-            <h3>CHUM CHILI</h3>
+            <h3>{{item.name}}</h3>
+            {{!<h3>CHUM CHILI</h3>!}}
             <div class="column-section">
                 <div class='wrap-image'>
-                    <img class="chumImage" src="./images/chumchili.webp" alt="Chum Chili">
+                    <img class="chumImage" src="{{item.image}}" alt="Chum Chili">
+                    {{!<img class="chumImage" src="./images/chumchili.webp" alt="Chum Chili">!}}
                 </div>
                 <div class='quantity-box'>
-                    <button class='minus' id='minus-box-2' data-number='2'>-</button>
+                    <button class="minus" id=`minus-box-${{item.id}}` data-number='{{item.id}}'></button>
+                    {{!<button class='minus' id='minus-box-2' data-number='2'>-</button>!}}
                     <div class='style-quantity' id='count-box2'>0</div>
                     <button class='add' id='plus-box-2' data-number='2'>+</button>
                 </div>
                 <div class="description">
                     <p>
-                        Chum fish with special chili ($10.00)
+                        {{item.description}}
+                        {{!Chum fish with special chili!}}
+                        {{item.price}}
+                        {{!($10.00)!}}
                     </p>
-                    <button class="check" id="addToCart">ADD TO CART</button>
                 </div>
             </div>
         </div>
+        {{/if}}
+        {{/each}}
+
+        {{#each chumburgers as |item|}}
+        {{#if}} (item.category === "CHUM BURGERS")
         <div id="chumstick" class="chumItemBox">
-            <h3>CHUM STICK</h3>
+            <h3>{{item.name}}</h3>
+            {{!<h3>CHUM STICK</h3>!}}
             <div class="column-section">
                 <div class='wrap-image'>
-                    <img class="chumImage" src="./images/chumstick.webp" alt="Chum Stick">
+                    <img class="chumImage" src="{{item.image}}" alt="Chum Stick">
+                    {{!<img class="chumImage" src="./images/chumstick.webp" alt="Chum Stick">!}}
                 </div>
                 <div class='quantity-box'>
-                    <button class='minus' id='minus-box-3' data-number='3'>-</button>
+                    <button class="minus" id=`minus-box-${{item.id}}` data-number='{{item.id}}'></button>
+                    {{!<button class='minus' id='minus-box-3' data-number='3'>-</button>!}}
                     <div class='style-quantity' id='count-box3'>0</div>
                     <button class='add' id='plus-box-3' data-number='3'>+</button>
                 </div>
                 <div class="description">
                     <p>
-                        A delicious chum stick ($10.00)
+                        {{item.description}}
+                        {{!A delicious chum stick!}}
+                        {{item.price}}
+                        {{!($10.00)!}}
                     </p>
-                    <button class="check" id="addToCart">ADD TO CART</button>
                 </div>
             </div>
         </div>
+        {{/if}}
+        {{/each}}
+
+        {{#each chumburgers as |item|}}
+        {{#if}} (item.category === "BEVERAGES")
         <div class="chumSection">
             <h2>BEVERAGES</h2>
             <div id="beverages" class="chumItemBox">
-                <h3>CHUM SHAKE</h3>
+                <h3>{{item.name}}</h3>
+                {{!<h3>CHUM SHAKE</h3>!}}
                 <div class="column-section">
                     <div class='wrap-image'>
-                        <img class="chumImage" src="./images/Kelp-Shake.png" alt="Chum Shake">
+                        <img class="chumImage" src="{{item.image}}" alt="Chum Shake">
+                        {{!<img class="chumImage" src="./images/Kelp-Shake.png" alt="Chum Shake">!}}
                     </div>
                     <div class='quantity-box'>
-                        <button class='minus' id='minus-box-4' data-number='4'>-</button>
+                        <button class="minus" id=`minus-box-${{item.id}}` data-number='{{item.id}}'></button>
+                        {{!<button class='minus' id='minus-box-4' data-number='4'>-</button>!}}
                         <div class='style-quantity' id='count-box4'>0</div>
                         <button class='add' id='plus-box-4' data-number='4'>+</button>
                     </div>
                     <div class="description">
                         <p>
-                            Don't be fulled this is not a the same as the
-                            Kelp shake. ($7.99)
+                            {{item.description}}
+                            {{!Don't be fulled this is not a the same as the
+                            Kelp shake. !}}
+                            {{item.price}}
+                            {{!($7.99)!}}
                          </p>
-                         <button class="check" id="addToCart">ADD TO CART</button>
                     </div>
                 </div>
             </div>
         </div>
+        {{/if}}
+        {{/each}}
          <!-- Modal placeholder (Subject to Change) -->
         <div class="modalBox" id="dialog" title="Your Cart Items">
             <ul class='displayList'>
@@ -163,7 +200,7 @@
                       effect: "close",
                       duration: 500
                     }
-                });
+                    });
                
                   $( "#opener-2" ).on( "click", function() {
                     $( "#dialog-2" ).dialog( "open" );
@@ -173,5 +210,3 @@
 
     </section>
     <script src="./js/chumbucket.js"></script>
-    </body>
-</html>

@@ -190,6 +190,22 @@ h3 {
 .modalBox p{
     padding: 10px;
 }
+.check{
+    background-color: red;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: SomeTimeLater;
+    cursor: pointer;
+ }
+ .description {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
 
 
 /* Modal Section */
