@@ -43,35 +43,72 @@ window.onclick = function (event) {
   }
 };
 
-const loginBtn = document.querySelectorAll(".login-button")[0];
-const signUpSubmitBtn = document.querySelectorAll(".sign-up-submit-btn")[0];
-const signUpUsername = $(".sign-up-username-field").val();
-const signUpEmail = $(".sign-up-email-field").val();
-const signUpPassword = $(".sign-up-password-field").val();
+// const loginBtn = document.querySelectorAll(".login-button")[0];
+// const signUpSubmitBtn = document.querySelectorAll(".sign-up-submit-btn")[0];
+// const signUpUsername = $(".sign-up-username-field").val();
+// const signUpEmail = $(".sign-up-email-field").val();
+// const signUpPassword = $(".sign-up-password-field").val();
 
-// attemptSignup function sends a POST request to the server to create a new user
-const attemptSignUp = async () => {
-  const signUpUsername = $(".sign-up-username-field").val();
-  const signUpEmail = $(".sign-up-email-field").val();
-  const signUpPassword = $(".sign-up-password-field").val();
+// // attemptSignup function sends a POST request to the server to create a new user
+// const attemptSignUp = async () => {
+//   const signUpUsername = $(".sign-up-username-field").val();
+//   const signUpEmail = $(".sign-up-email-field").val();
+//   const signUpPassword = $(".sign-up-password-field").val();
 
-  if (signUpUsername && signUpEmail && signUpPassword) {
-    const signUpResponse = await fetch("/api/users", {
-      method: "POST",
-      body: JSON.stringify({ signUpUsername, signUpEmail, signUpPassword }),
-      headers: { "Content-Type": "application/json" },
+//   if (signUpUsername && signUpEmail && signUpPassword) {
+//     const signUpResponse = await fetch("/api/users", {
+//       method: "POST",
+//       body: JSON.stringify({ signUpUsername, signUpEmail, signUpPassword }),
+//       headers: { "Content-Type": "application/json" },
+//     });
+
+//     if (signUpResponse.ok) {
+//       // If successful, reloads the page
+//       alert("Sign up successful! Please sign in! ⚓").then(
+//         (signUpTile.style.display = "none")
+//       );
+//     } else {
+//       alert("sign up failed, please try again 🦈");
+//     }
+//   }
+// };
+
+
+
+
+//Omars version of the above function
+const submitButton = document.querySelector('.sign-up-submit-btn');
+
+submitButton.addEventListener('click', async () => {
+  // Get the input field values
+  const usernameInput = document.querySelector('.sign-up-username-field');
+  const emailInput = document.querySelector('.sign-up-email-field');
+  const passwordInput = document.querySelector('.sign-up-password-field');
+
+  // Create a data object with the input values
+  const userData = {
+    user_name: usernameInput.value,
+    email: emailInput.value,
+    password: passwordInput.value
+  };
+
+  try {
+    // Send the POST request to your server endpoint
+    const response = await fetch('/api/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(userData)
     });
 
-    if (signUpResponse.ok) {
-      // If successful, reloads the page
-      alert("Sign up successful! Please sign in! ⚓").then(
-        (signUpTile.style.display = "none")
-      );
-    } else {
-      alert("sign up failed, please try again 🦈");
-    }
+    // Handle the response as needed
+    const responseData = await response.json();
+    console.log(responseData);
+  } catch (error) {
+    console.error(error);
   }
-};
+});
 
 // attemptLogin function sends a POST request to the server to check if the user exists
 const attemptLogin = async () => {
