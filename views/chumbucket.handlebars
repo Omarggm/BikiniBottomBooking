@@ -15,9 +15,9 @@
                 <img class="menuImage" src="./images/{{this.item_image}}" alt="chum-bucket food">
             </div>
             <div class='quantity-box'>
-                <button class="minus" id='minus-box-{{this.menu_id}}' data-number='{{this.menu_id}}'></button>
+                <button class="minus" id='minus-box-{{this.menu_id}}' data-number='{{this.menu_id}}' onclick="garyMeow()">-</button>
                 <div class='style-quantity' id='count-box0'>0</div>
-                <button class='add' id='plus-box-0' data-number='0'>+</button>
+                <button class='add' id='plus-box-0' data-number='0' onclick="garyMeow()">+</button>
             </div>
             <div class="description">
                     <p>
@@ -187,7 +187,7 @@
             <button id="opener-2" style="background: rgb(134, 32, 32);">Confirm Order</button>
         </div>
                  
-        <button class="opener" id="opener"><img src="https://img.icons8.com/small/32/000000/shopping-cart.png"/></button>
+        <button class="opener" id="opener" onclick="stankNoise()"><img src="https://img.icons8.com/small/32/000000/shopping-cart.png"/></button>
                 
         <div class="modalBox" id="dialog-2" title="Order Complete!">
             <p>Your order has been submitted.</p>
@@ -232,6 +232,9 @@
             </script>
 
     </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="../public/js/howler.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="../models/chumMenu.js"></script>
