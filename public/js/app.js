@@ -1,11 +1,14 @@
-// Code goes here
-
-// Sign-up Pop-up Modal stuff
+// Our constants for the sign up and login buttons
 
 const signUpButton = document.querySelectorAll(".sign-up-button")[0];
 const signUpTile = document.querySelectorAll("#signUpTile")[0];
 signUpTile.style.display = "none";
 const closePopup = document.querySelectorAll(".close-popup")[0];
+const frontPageTile = document.querySelectorAll(".frontpage-input-tile")[0];
+// frontPageTile.style.display = "block";
+const aligner = document.querySelectorAll(".aligner")[0];
+
+const decider = document.querySelectorAll(".decider");
 
 signUpButton.addEventListener("click", function () {
   signUpTile.style.display = "block";
@@ -43,8 +46,9 @@ window.onclick = function (event) {
   }
 };
 
-// const loginBtn = document.querySelectorAll(".login-button")[0];
-// const signUpSubmitBtn = document.querySelectorAll(".sign-up-submit-btn")[0];
+const loginBtn = document.querySelectorAll(".login-button")[0];
+const signUpSubmitBtn = document.querySelectorAll(".sign-up-submit-btn")[0];
+
 // const signUpUsername = $(".sign-up-username-field").val();
 // const signUpEmail = $(".sign-up-email-field").val();
 // const signUpPassword = $(".sign-up-password-field").val();
@@ -123,8 +127,12 @@ const attemptLogin = async () => {
     });
 
     if (loginResponse.ok) {
-      // If successful, reloads the page
-      location.reload();
+
+      frontPageTile.style.display = "none";
+      aligner.style.display = "none";
+      $(".decider").html("<h3 class='logged-in-confirm'>You Are Logged In!</h3>");
+
+      console.log("login successful");
     } else {
       alert("sign in failed, please try again 🦈");
     }

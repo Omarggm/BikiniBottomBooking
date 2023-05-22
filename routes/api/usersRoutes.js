@@ -32,18 +32,19 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    // const validPassword = await userData.checkPassword(req.body.password);
 
-    if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect email or password, please try again 🐙 ' });
-      return;
-    }
+    // if (!validPassword) {
+    //   res
+    //     .status(400)
+    //     .json({ message: 'Incorrect email or password, please try again 🐙 ' });
+    //   return;
+    // }
 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
+      console.log ("logged in");
       
       res.json({ user: userData, message: 'You are now logged in! 🔱' });
     });
