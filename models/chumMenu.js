@@ -1,42 +1,46 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connections');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connections");
 // commented out because it is no longer being called in new format.
 // const User = require('./User');
 
-class ChumMenu extends Model { }
-  ChumMenu.init(
-    {
-      menu_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-      item_name: {
-        type: DataTypes.STRING(50),
-        allowNull: false,
-      },
-      item_price: {
-        type: DataTypes.DECIMAL(10, 2),
-        allowNull: false,
-      },
-      item_description: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      category: {
-        type: DataTypes.STRING,
-        allowNull: false,
+class ChumMenu extends Model {}
+ChumMenu.init(
+  {
+    menu_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    item_name: {
+      type: DataTypes.STRING(50),
+      allowNull: false,
+    },
+    item_price: {
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: false,
+    },
+    item_description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    item_image: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
-    {
-      sequelize,
-      timestamps: false,
-      freezeTableName: true,
-      underscored: true,
-      modelName: 'chum_menu',
-    },
-  );
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "chum_menu",
+  }
+);
 
 module.exports = ChumMenu;
 
