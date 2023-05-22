@@ -32,8 +32,9 @@
                             </div>
                             <div class="description">
                                 <p>
-                                    A delicious burger ($10.99)
+                                    A delicious burger 
                                 </p>
+                                <span class="shop-item-price">($10.99)</span>
                             </div>
                         </div>
                      </div>
@@ -50,7 +51,8 @@
                             <button class='add' id='plus-box-1' data-number='1' onclick="garyMeow()">+</button>
                         </div>
                         <div class="description">
-                            <p>Same ingredients as the Krabby Patty, but with cheese! ($12.99)</p>
+                            <p>Same ingredients as the Krabby Patty, but with cheese! </p>
+                            <span class="shop-item-price">($12.99)</span>
                         </div>
                     </div>
                 </div>
@@ -67,7 +69,8 @@
                         </div>
                         <div class="description">
                             <p>
-                                Fries made from kelp ($5.99)</p>
+                                Fries made from kelp </p>
+                                <span class="shop-item-price">($5.99)</span>
                         </div>
                     </div>
                 </div>
@@ -89,8 +92,9 @@
                                 <p>
                                     If undersea burgers aren't your cup of tea, the Krabby Pizza is just the thing for your
                                     crustacious taste buds. Made from a ready to order Krabby Patty, our culinary artists
-                                    convert the burger into a dilectable pepperoni pizza. ($11.99)
+                                    convert the burger into a dilectable pepperoni pizza. 
                                 </p>
+                                <span class="shop-item-price">($11.99)</span>
                             </div>
                         </div>
                     </div>
@@ -111,8 +115,9 @@
                                 Inspired by Mr. Krab's own daughter, Pearl, the Krusty Salad (pronounced Sal-Ad) is the
                                 health concious alternative to greasy patties. Made with freshly prepared sea-weed
                                 lettuce
-                                and tomatos. ($14.50)
+                                and tomatos. 
                             </p>
+                            <span class="shop-item-price">($14.50)</span>
                         </div>
                     </div>
                 </div>
@@ -132,8 +137,9 @@
                             <p>
                                 Crafted for a texas-sized apetite, the Peas (In a Can) Pie is an undersea dwellers
                                 dry-dream
-                                made with a newly opened can of peas placed inside a home-made pie. ($7.99)
+                                made with a newly opened can of peas placed inside a home-made pie. 
                             </p>
+                            <span class="shop-item-price">($7.99)</span>
                         </div>
                     </div>
                 </div>
@@ -152,8 +158,9 @@
                         <div class="description">
                             <p>
                                 If your sweet tooth can not be satiated by Grandma SquarePants' cookies, then look no
-                                further. Our Seanut Brittle is ordered fresh from the local grocery store. ($7.99)
+                                further. Our Seanut Brittle is ordered fresh from the local grocery store. 
                             </p>
+                            <span class="shop-item-price">($7.99)</span>
                         </div>
                     </div>
                 </div>
@@ -173,7 +180,8 @@
                             <button class='add' id='plus-box-8' data-number='8' onclick="garyMeow()">+</button>
                         </div>
                         <div class="description">
-                            <p>(Unavailable for Delivery with Krabby Pizza) ($3.99)</p>
+                            <p>(Unavailable for Delivery with Krabby Pizza)</p>
+                            <span class="shop-item-price">($3.99)</span>
                         </div>
                     </div>
                 </div>
@@ -193,8 +201,9 @@
                             <p>
                                 Though it may perpetually surround us, the water on tap at the Krusty Crab is sure to
                                 quench
-                                any thirst.($1.75)
+                                any thirst.
                             </p>
+                            <span class="shop-item-price">($1.75)</span>
                         </div>
                     </div>
                 </div>
@@ -211,7 +220,9 @@
                         </div>
                         <div class="description">
                             <p>
-                                A delicious shake ($7.99)
+                                A delicious shake
+                            </p>
+                            <span class="shop-item-price">($7.99)</span>
                         </div>
                     </div>
                 </div>
@@ -230,8 +241,9 @@
                             <p>
                                 Shipped directly from above the surface, Krusty Krab tea can be placed in any glass (or
                                 body
-                                of water) to create a refreshing flavor that won't overtake your pallete. ($4.65)
+                                of water) to create a refreshing flavor that won't overtake your pallete.
                             </p>
+                            <span class="shop-item-price">($4.65)</span>
                         </div>
                     </div>
                 </div>
@@ -251,10 +263,12 @@
                         You're order will be ready for pick up in <b>30 minutes</b>.
                     </p>
                 </div>
+                
                 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
                 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
         
                     <script>
+                        
                     $( function shoppingCart() {
                         $( "#dialog" ).dialog({
                           autoOpen: false,
@@ -278,8 +292,8 @@
                               duration: 500
                             },
                             hide: {
-                              effect: "close",
-                              duration: 500
+                                effect: "close",
+                                duration: 500
                             }});
                        
                           $( "#opener-2" ).on( "click", function() {
