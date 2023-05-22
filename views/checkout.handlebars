@@ -9,11 +9,23 @@
     <div class="order-summary-tile">
         <h2 class="order-title">YOUR ORDER</h2>
         <img src="./images/Patrick1.png" class="patrick-icon">
+        {{#if items.length}}
+        {{#each items as |item| }}
+
+        <div class="item-and-price-row">
+            <h3>• item<a href="/krustykrab/{{item.id}}">{{item.item_name}}</a> x {{item.item_name.length}}</h3>
+            <h3>$xx.xx{{item.item_price}}</h3>
+        </div>
+
+        {{/each}}
+        {{/if}}
+
+
 
         {{!-- {{order}} goes here --}}
 
+        <h3 class="order-total">TOTAL: </h3>
 
-        <h3 class="order-total">TOTAL: </h2>
     </div>
 
 </div>

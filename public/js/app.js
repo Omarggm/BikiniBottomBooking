@@ -66,7 +66,8 @@ const attemptSignUp = async () => {
 
         if (signUpResponse.ok) {
             // If successful, reloads the page
-            alert("Sign up successful! Please sign in! ⚓");
+            alert("Sign up successful! Please sign in! ⚓")
+            .then(signUpTile.style.display = "none");
         } else {
             alert("sign up failed, please try again 🦈");
         }
@@ -76,14 +77,14 @@ const attemptSignUp = async () => {
 
 // attemptLogin function sends a POST request to the server to check if the user exists
 const attemptLogin = async () => {
-    const loginEmail = $(".login-field").val();
-    const loginPassword = $(".password-field").val();
+    const email = $(".login-field").val();
+    const password = $(".password-field").val();
 
-    if (loginEmail && loginPassword) {
+    if (email && password) {
 
         const loginResponse = await fetch("/api/users/login", {
             method: 'POST',
-            body: JSON.stringify({ loginEmail, loginPassword }),
+            body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -98,18 +99,18 @@ const attemptLogin = async () => {
 
 
 
-loginBtn.addEventListener("click", function () {
-    const loginEmail = $(".login-field").val();
-    const loginPassword = $(".password-field").val()
+// loginBtn.addEventListener("click", function () {
+//     const email = $(".login-field").val();
+//     const password = $(".password-field").val()
 
-    // stops process and does nothing if nothing is entered for either field
-    if (loginEmail === "" || loginPassword === "") {
-        return;
-    } else {
-        // else tries to login the user
-        attemptLogin(loginEmail, loginPassword);
-    }
-});
+//     // stops process and does nothing if nothing is entered for either field
+//     if (email === "" || password === "") {
+//         return;
+//     } else {
+//         // else tries to login the user
+//         attemptLogin(email, password);
+//     }
+// });
 
 signUpSubmitBtn.addEventListener("click", function () {
     const signUpUsername = $(".sign-up-username-field").val();
@@ -136,5 +137,5 @@ const logout = async () => {
       alert("You aren't actually logged in, sir 🦈");
     }
   };
-  
+  document.querySelector('.login-button').addEventListener('click', attemptLogin);
   document.querySelector('.logoutBtn').addEventListener('click', logout);
