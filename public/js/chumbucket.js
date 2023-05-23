@@ -1,87 +1,70 @@
-// const { text } = require("express");
-
-const chumItems = [
-
+var menuItems = [
   {
-    name: "CHUM BURGER x",
-    count: 0,
-  },
-
-  {
-    name: "CHUM FRIES x",
-    count: 0,
-  },
-
-  {
-    name: "CHUM CHILI x",
+    item_name: "CHUM BURGER",
     count: 0,
   },
   {
-    name: "CHUM STICK x",
+    item_name: "CHUM FRIES",
     count: 0,
   },
   {
-    name: "CHUM SHAKE x",
+    item_name: "CHUM CHILI",
+    count: 0,
+  },
+  {
+    item_name: "CHUM STICK",
+    count: 0,
+  },
+  {
+    item_name: "CHUM SHAKE",
     count: 0,
   },
 ];
 
-const section = document.querySelector(".style-section");
-const opener = document.querySelector(".opener");
+var section = document.querySelector(".style-section");
+var KKopener = document.querySelector(".opener");
 
 section.addEventListener("click", function (event) {
   if (event.target.classList.contains("minus")) {
-    const index = event.target.dataset.number;
-    const chumItem = chumItems[index];
-    if (chumItem.count > 0) {
-      chumItem.count--;
+    var index = event.target.dataset.number;
+    var menuItem = menuItems[index];
+    if (menuItem.count > 0) {
+      menuItem.count--;
     }
-    var textBox = document.querySelector("#count-box" + index);
-    textBox = chumItem.count;
-    textBox.textContent = textBox;
-    console.log("this item count is " + chumItem.count + " " + chumItem.name + "(s)");
-    localStorage.setItem(chumItem.name, chumItem.count);
+    var textBox = event.target.nextElementSibling;
+    textBox.textContent = menuItem.count;
+    console.log("this item count is " + menuItem.count + " " + menuItem.item_name + "(s)");
+    localStorage.setItem(menuItem.item_name, menuItem.count);
   }
 
   if (event.target.classList.contains("add")) {
-    const index = event.target.dataset.number;
-    const chumItem = chumItems[index];
-    if (chumItem.count < 20) {
-      chumItem.count++;
+    var index = event.target.dataset.number;
+    var menuItem = menuItems[index];
+    if (menuItem.count < 20) {
+      menuItem.count++;
     }
-    var textBox = document.querySelector("#count-box" + index);
-    textBox = chumItem.count;
-    textBox.textContent = textBox;
-    console.log("this item count is " + chumItem.count + " " + chumItem.name + "(s)");
-    localStorage.setItem(chumItem.name, chumItem.count);
+    var textBox = event.target.previousElementSibling;
+    textBox.textContent = menuItem.count;
+    console.log("this item count is " + menuItem.count + " " + menuItem.item_name + "(s)");
+    localStorage.setItem(menuItem.item_name, menuItem.count);
   }
 });
 
-opener.addEventListener("click", function () {
-  const listItem = document.querySelector("#dialog ul");
+KKopener.addEventListener("click", function () {
+  var listItem = document.querySelector("#dialog ul");
 
   while (listItem.hasChildNodes()) {
     listItem.removeChild(listItem.firstChild);
   }
 
-  for (var i = 0; i < chumItems.length; i++) {
-    const quantity = localStorage.getItem(chumItems[i].name);
+  for (var i = 0; i < menuItems.length; i++) {
+    var quantity = localStorage.getItem(menuItems[i].item_name);
 
     if (quantity != null && quantity > 0) {
-      const newList = document.createElement("li");
+      var newList = document.createElement("li");
       newList.classList.add("list");
-      newList.textContent = chumItems[i].name + quantity;
+      newList.textContent = menuItems[i].item_name + " " + quantity;
       listItem.appendChild(newList);
     }
   }
 });
-
-// Put inside the event listener to display orders that returned more than
-// var example = menuItems.filter(m => m.count > 0);
-// var example2 = menuItems.filter(m => m.name === 'Water x');
-
-const array = ["love", "cute", "awesome"];
-
-const array2 = [{ name: "cool" }, { type: "awesome" }];
-
-
