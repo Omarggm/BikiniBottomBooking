@@ -51,7 +51,7 @@ And checkout your order!
 * Nodemon
 
 ### Deployed Site
-* Heroku link: https://bikini-bottom-booking.herokuapp.com/
+* Heroku link: https://bbbooking.herokuapp.com/
 
 ### License
 This application is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
