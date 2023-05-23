@@ -13,9 +13,9 @@ Users sign-up, login, choose a restaurant, and place an order for pick up, while
 We were encouraged early on to focus on a project that not only would help us learn practical web design, but was also fun and would allow us to demonstrate some creativity and quirkiness to inspire us to go as far as we can with it.
 As a team, we learned to work in both separate front end and back end groups and on challenges that were integrated between both.
 ## User Story
-AS a hungry sentient sea creature who doesn't want to wait in line
-I WANT to order some delicious foor in advance to pick up later
-SO THAT I spend less time procuring tasty delicious sea food that is MOSTLY made up of other sea creatures.
+* AS a hungry sentient sea creature who doesn't want to wait in line
+* I WANT to order some delicious foor in advance to pick up later
+* SO THAT I spend less time procuring tasty delicious sea food that is MOSTLY made up of other sea creatures.
 
 ## Usage
 Sign in, or take a look at the menus directly first if you wish. Also, try hovering  your mouse on the pineapple and/or clicking on it. No reason.
