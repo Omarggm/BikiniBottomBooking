@@ -1,4 +1,7 @@
+// const { text } = require("express");
+
 const chumItems = [
+
   {
     name: "CHUM BURGER x",
     count: 0,
@@ -13,7 +16,6 @@ const chumItems = [
     name: "CHUM CHILI x",
     count: 0,
   },
-
   {
     name: "CHUM STICK x",
     count: 0,
@@ -34,8 +36,10 @@ section.addEventListener("click", function (event) {
     if (chumItem.count > 0) {
       chumItem.count--;
     }
-    const textBox = document.querySelector("#count-box" + index);
-    textBox.textContent = chumItem.count;
+    var textBox = document.querySelector("#count-box" + index);
+    textBox = chumItem.count;
+    textBox.textContent = textBox;
+    console.log("this item count is " + chumItem.count + " " + chumItem.name + "(s)");
     localStorage.setItem(chumItem.name, chumItem.count);
   }
 
@@ -45,8 +49,10 @@ section.addEventListener("click", function (event) {
     if (chumItem.count < 20) {
       chumItem.count++;
     }
-    const textBox = document.querySelector("#count-box" + index);
-    textBox.textContent = chumItem.count;
+    var textBox = document.querySelector("#count-box" + index);
+    textBox = chumItem.count;
+    textBox.textContent = textBox;
+    console.log("this item count is " + chumItem.count + " " + chumItem.name + "(s)");
     localStorage.setItem(chumItem.name, chumItem.count);
   }
 });

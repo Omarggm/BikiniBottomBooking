@@ -245,3 +245,7 @@ h3 {
     position:fixed;
 
 }
+
+.ui-dialog-title {
+    margin-right: 15px;
+}
