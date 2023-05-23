@@ -105,7 +105,7 @@ submitButton.addEventListener('click', async () => {
       },
       body: JSON.stringify(userData)
     });
-
+    if (response.ok) {alert("Sign up successful! Please sign in! ⚓")};
     // Handle the response as needed
     const responseData = await response.json();
     console.log(responseData);
