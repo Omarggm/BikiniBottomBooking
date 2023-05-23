@@ -1,5 +1,8 @@
 var menuItems = [
   {
+    item_name: "CHUM",
+    count: 0,
+  },  {
     item_name: "CHUM BURGER",
     count: 0,
   },

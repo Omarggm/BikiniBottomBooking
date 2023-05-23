@@ -50,7 +50,7 @@
   },
   {
     "item_name": "DIET DR. KELP",
-    "item_description": "A delicious shake",
+    "item_description": "A delicious diet cola",
     "item_price": 3.99,
     "category": "Beverages",
     "item_image": "Diet-Dr-Kelp.png"
@@ -71,7 +71,7 @@
   },
   {
     "item_name": "TEA",
-    "item_description": "A delicious shake",
+    "item_description": "A delicious tea",
     "item_price": 7.99,
     "category": "Beverages",
     "item_image": "Tea.jpg"

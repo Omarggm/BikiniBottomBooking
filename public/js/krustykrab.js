@@ -1,14 +1,14 @@
 var menuItems = [
   {
+    name: "PRETTY PATTY SLIDERS x",
+    count: 0,
+  },
+  {
     name: "KRABBY PATTY x",
     count: 0,
   },
   {
     name: "KRABBY PATTY (WITH CHEESE) x",
-    count: 0,
-  },
-  {
-    name: "PRETTY PATTY SLIDERS x",
     count: 0,
   },
   {
