@@ -4,7 +4,7 @@ function sadSong() {
   var sound = new Howl({
     src: ["../sounds/sad-song.mp3"],
     autoplay: true,
-    volume: 0.5,
+    volume: 0.4,
   });
 }
 
@@ -20,7 +20,7 @@ function stankNoise() {
   var sound = new Howl({
     src: ["../sounds/stank-noise.mp3"],
     autoplay: true,
-    volume: 0.5,
+    volume: 0.4,
   });
 }
 
@@ -36,7 +36,7 @@ function squarePants() {
   var sound = new Howl({
     src: ["../sounds/squarepants.mp3"],
     autoplay: true,
-    volume: 0.5,
+    volume: 0.4,
   });
 }
 
