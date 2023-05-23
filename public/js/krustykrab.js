@@ -87,7 +87,7 @@ section.addEventListener("click", function (event) {
     var textBox = document.querySelector("#count-box");
     textBox = menuItem.count;
     textBox.textContent = textBox;
-    ("#count-box").textContent = menuItem.count;
+    ("#count-box" + index).textContent = menuItem.count;
     console.log("this item count is " + menuItem.count + " " + menuItem.name + "(s)");
     localStorage.setItem(menuItem.name, menuItem.count);
   }
