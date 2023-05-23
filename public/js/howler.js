@@ -20,7 +20,7 @@ function stankNoise() {
   var sound = new Howl({
     src: ["../sounds/stank-noise.mp3"],
     autoplay: true,
-    volume: 0.8,
+    volume: 0.5,
   });
 }
 
