@@ -52,6 +52,7 @@ var menuItems = [
 
 var section = document.querySelector(".style-section");
 var KKopener = document.querySelector(".opener");
+var emptyCart = document.querySelector(".empty-cart");
 
 section.addEventListener("click", function (event) {
   if (event.target.classList.contains("minus")) {
@@ -97,3 +98,12 @@ KKopener.addEventListener("click", function () {
     }
   }
 });
+
+emptyCart.addEventListener("click", function () {
+  const clearCart = confirm("Are you sure you want to emptyyour cart?");
+  if (clearCart) {
+    localStorage.clear();
+    location.reload();
+  }
+});
+   

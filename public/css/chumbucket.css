@@ -223,7 +223,7 @@ h3 {
     margin: 10px;
     border: 2px solid black;
 }
-.opener{
+.cb-opener{
     background: linear-gradient(0.4turn, #4e4e4e 20%, #d4d4d4 70%, #808080 98%);
     background-size: cover;
     border-width: 10px;
@@ -248,4 +248,29 @@ h3 {
 
 .ui-dialog-title {
     margin-right: 15px;
+}
+
+.cb-empty-cart {
+    color: #2e2e2e;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(0.9turn, #4e4e4e 20%, #d4d4d4 70%, #808080 98%);
+    border-width: 4px;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px;
+    text-align: center;
+    width:180px;
+    min-height: fit-content;
+    height: 60px;
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    border-radius: 12px;
+}
+
+.cb-empty-cart:hover {
+    color: #1d1919;
+    background: linear-gradient(0.9turn, #583636 18%, #e6d4d4 70%, #4e3232);
+    box-shadow: 2px 2px 2px #3c4046, 3px 4px 4px #3f3635;
+    border: 4px solid #2c2626;
 }
