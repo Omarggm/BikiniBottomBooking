@@ -47,7 +47,7 @@ window.onclick = function (event) {
 };
 
 const loginBtn = document.querySelectorAll(".login-button")[0];
-const signUpSubmitBtn = document.querySelectorAll(".sign-up-submit-btn")[0];
+// const signUpSubmitBtn = document.querySelectorAll(".sign-up-submit-btn")[0];
 
 // const signUpUsername = $(".sign-up-username-field").val();
 // const signUpEmail = $(".sign-up-email-field").val();
@@ -83,6 +83,7 @@ const signUpSubmitBtn = document.querySelectorAll(".sign-up-submit-btn")[0];
 //Omars version of the above function
 const submitButton = document.querySelector('.sign-up-submit-btn');
 
+
 submitButton.addEventListener('click', async () => {
   // Get the input field values
   const usernameInput = document.querySelector('.sign-up-username-field');
@@ -95,7 +96,18 @@ submitButton.addEventListener('click', async () => {
     email: emailInput.value,
     password: passwordInput.value
   };
-
+  // Dan's validity checks
+  if (usernameInput.value === "" || emailInput.value === "" || passwordInput.value === "") {
+    return;
+  } else if (emailInput.value.indexOf('@') < 1 || emailInput.value.indexOf('.') < 1 || emailInput.value.lastIndexOf('.') < emailInput.value.indexOf('@')) {
+    alert("Please enter a valid email 🔱");
+    return;
+  } else if
+    (passwordInput.value.length < 6) {
+    alert("Please use at least 6 characters for your password")
+    return;
+  };
+  // end of Dan's part of this one
   try {
     // Send the POST request to your server endpoint
     const response = await fetch('/api/users', {
@@ -105,14 +117,17 @@ submitButton.addEventListener('click', async () => {
       },
       body: JSON.stringify(userData)
     });
-    if (response.ok) {alert("Sign up successful! Please sign in! ⚓")};
+    if (response.ok) { alert("Sign up successful! Please sign in! ⚓") };
     // Handle the response as needed
     const responseData = await response.json();
     console.log(responseData);
   } catch (error) {
     console.error(error);
   }
+
 });
+
+
 
 // attemptLogin function sends a POST request to the server to check if the user exists
 const attemptLogin = async () => {
@@ -152,17 +167,17 @@ loginBtn.addEventListener("click", function () {
   }
 });
 
-signUpSubmitBtn.addEventListener("click", function () {
-  const signUpUsername = $(".sign-up-username-field").val();
-  const signUpEmail = $(".sign-up-email-field").val();
-  const signUpPassword = $(".sign-up-password-field").val();
+// signUpSubmitBtn.addEventListener("click", function () {
+//   const signUpUsername = $(".sign-up-username-field").val();
+//   const signUpEmail = $(".sign-up-email-field").val();
+//   const signUpPassword = $(".sign-up-password-field").val();
 
-  if (signUpUsername === "" || signUpEmail === "" || signUpPassword === "") {
-    return;
-  } else {
-    attemptSignUp(signUpUsername, signUpEmail, signUpPassword);
-  }
-});
+//   if (signUpUsername === "" || signUpEmail === "" || signUpPassword === "") {
+//     return;
+//   } else {
+//     attemptSignUp(signUpUsername, signUpEmail, signUpPassword);
+//   }
+// });
 
 // logout function below (I guess that might be kinda obvious though)
 const logout = async () => {
