@@ -1,13 +1,15 @@
+// lead item is purposely a dummy item not shown on the site to ensure proper targeting
 var menuItems = [
   {
     item_name: "CHUM",
     count: 0,
-  },  {
-    item_name: "CHUM BURGER",
+  },  
+  {
+    item_name: "CHUM FRIES",
     count: 0,
   },
   {
-    item_name: "CHUM FRIES",
+    item_name: "CHUM BURGER",
     count: 0,
   },
   {
