@@ -1,0 +1,1 @@
+Note: all of the html files were merely placeholder files, later moved and still used for some testing

@@ -1,3 +1,4 @@
+// lead item is purposely a dummy item not shown on the site to ensure proper targeting
 var menuItems = [
   {
     name: "PRETTY PATTY SLIDERS x",
