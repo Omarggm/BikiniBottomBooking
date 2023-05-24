@@ -27,7 +27,8 @@ var menuItems = [
 ];
 
 var section = document.querySelector(".style-section");
-var KKopener = document.querySelector(".opener");
+var opener = document.querySelector(".cb-opener");
+var emptyCart = document.querySelector(".cb-empty-cart");
 
 section.addEventListener("click", function (event) {
   if (event.target.classList.contains("minus")) {
@@ -55,7 +56,7 @@ section.addEventListener("click", function (event) {
   }
 });
 
-KKopener.addEventListener("click", function () {
+opener.addEventListener("click", function () {
   var listItem = document.querySelector("#dialog ul");
 
   while (listItem.hasChildNodes()) {
@@ -71,5 +72,13 @@ KKopener.addEventListener("click", function () {
       newList.textContent = menuItems[i].item_name + " " + quantity;
       listItem.appendChild(newList);
     }
+  }
+});
+
+emptyCart.addEventListener("click", function () {
+  const clearCart = confirm("Are you sure you want to emptyyour cart?");
+  if (clearCart) {
+    localStorage.clear();
+    location.reload();
   }
 });

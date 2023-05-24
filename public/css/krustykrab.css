@@ -243,3 +243,29 @@ h3 {
     position:fixed;
 
 }
+
+
+.empty-cart {
+    color: #2e2e2e;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(0.9turn, #4e4e4e 20%, #d4d4d4 70%, #808080 98%);
+    border-width: 4px;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px;
+    text-align: center;
+    width:180px;
+    min-height: fit-content;
+    height: 60px;
+    position:fixed;
+    bottom:90px;
+    right:20px;
+    border-radius: 12px;
+}
+
+.empty-cart:hover {
+    color: #000000;
+    background: linear-gradient(0.9turn, #5e5e5e 18%, #ebebeb 70%, #888888);
+    box-shadow: 2px 2px 2px #3c4046, 3px 4px 4px #3a3e44;
+    border: 4px solid black;
+}

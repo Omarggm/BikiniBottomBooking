@@ -47,3 +47,11 @@ function ohYeah() {
     volume: 1.0,
   });
 }
+
+function trashCan() {
+  var sound = new Howl({
+    src: ["../sounds/ohyeah.mp3"],
+    autoplay: true,
+    volume: 1.0,
+  });
+}
