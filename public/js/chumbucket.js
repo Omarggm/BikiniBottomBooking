@@ -76,7 +76,7 @@ opener.addEventListener("click", function () {
 });
 
 emptyCart.addEventListener("click", function () {
-  const clearCart = confirm("Are you sure you want to emptyyour cart?");
+  const clearCart = confirm("Are you sure you want to empty your cart?");
   if (clearCart) {
     localStorage.clear();
     location.reload();
