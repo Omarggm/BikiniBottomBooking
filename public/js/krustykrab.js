@@ -92,9 +92,11 @@ section.addEventListener("click", function (event) {
   }
 });
 
+
+// f
 kkOpener.addEventListener("click", function () {
   var listItem = document.querySelector("#dialog ul");
-  var total = 0;
+  // var total = 0;
 
   while (listItem.hasChildNodes()) {
     listItem.removeChild(listItem.firstChild);
@@ -104,10 +106,10 @@ kkOpener.addEventListener("click", function () {
   for (var i = 0; i < menuItems.length; i++) {
     var quantity = localStorage.getItem(menuItems[i].name);
 
-    total += (menuItems[i].item_price * menuItems[i].count);
+    // total += (menuItems[i].item_price * menuItems[i].count);
 
     // prevents weird rounding errors
-    total = Math.round(total * 100) / 100;
+    // total = Math.round(total * 100) / 100;
 
     if (quantity != null && quantity > 0) {
       var newList = document.createElement("li");
@@ -116,8 +118,15 @@ kkOpener.addEventListener("click", function () {
       listItem.appendChild(newList);
     }
   }
-  if (total !== 0) {listItem.append("🦀 Total: $" + total)};
+  // for (var i = 0; i < menuItems.length; i++) {
+  //   total += localStorage.getItem(menuItems[i].item_price * menuItems[i].count);
+  // }
+  // console.log("total is $" + total);
+  // if (total > 0 ) {totalPrice.append("🦀 Total: $" + total)};
 });
+// let total = 0;
+
+
 
 emptyCart.addEventListener("click", function () {
   const clearCart = confirm("Are you sure you want to empty your cart?");

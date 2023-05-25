@@ -66,7 +66,7 @@ section.addEventListener("click", function (event) {
 
 opener.addEventListener("click", function () {
   var listItem = document.querySelector("#dialog ul");
-  var total = 0;
+  // var total = 0;
 
   while (listItem.hasChildNodes()) {
     listItem.removeChild(listItem.firstChild);
@@ -76,10 +76,10 @@ opener.addEventListener("click", function () {
     var quantity = localStorage.getItem(menuItems[i].item_name);
 
 
-    total += (menuItems[i].item_price * menuItems[i].count);
+    // total += (menuItems[i].item_price * menuItems[i].count);
 
     // prevents weird rounding errors
-    total = Math.round(total * 100) / 100;
+    // total = Math.round(total * 100) / 100;
 
     if (quantity != null && quantity > 0) {
       var newList = document.createElement("li");
@@ -89,7 +89,7 @@ opener.addEventListener("click", function () {
     }
 
   }
-  if (total !== 0) {listItem.append("🦈 Total: $" + total)};
+  // if (total !== 0) {listItem.append("🦈 Total: $" + total)};
 });
 
 emptyCart.addEventListener("click", function () {
