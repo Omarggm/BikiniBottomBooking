@@ -112,7 +112,7 @@ kkOpener.addEventListener("click", function () {
     if (quantity != null && quantity > 0) {
       var newList = document.createElement("li");
       newList.classList.add("list");
-      newList.textContent = menuItems[i].name + ": " + menuItems[i].item_price + " x" + quantity;
+      newList.textContent = menuItems[i].name + ": $" + menuItems[i].item_price + " x" + quantity;
       listItem.appendChild(newList);
     }
   }
@@ -126,4 +126,3 @@ emptyCart.addEventListener("click", function () {
     location.reload();
   }
 });
-   
