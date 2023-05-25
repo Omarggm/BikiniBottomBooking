@@ -116,7 +116,7 @@ kkOpener.addEventListener("click", function () {
       listItem.appendChild(newList);
     }
   }
-  listItem.append("🦀 Total: $" + total);
+  if (total !== 0) {listItem.append("🦀 Total: $" + total)};
 });
 
 emptyCart.addEventListener("click", function () {
