@@ -14,24 +14,24 @@
     "item_image": "chumburger.jpeg"
   },
   {
-    "item_name": "CHUM CHILI",
-    "item_description": "Chum fish with special chili",
-    "item_price": 10.00,
-    "category": "CHUM BURGERS",
-    "item_image": "chumchili.webp"
-  },
-  {
-    "item_name": "CHUM STICK",
-    "item_description": "A delicious chum stick ($10.00)",
-    "item_price": 5.99,
-    "category": "CHUM BURGERS",
-    "item_image": "chumstick.webp"
-  },
-  {
     "item_name": "Chum Shake",
     "item_description": "A delicious shake",
     "item_price": 7.99,
     "category": "BEVERAGES",
     "item_image": "Kelp-Shake.png"
+  },
+  {
+    "item_name": "CHUM STICK",
+    "item_description": "A delicious chum stick",
+    "item_price": 5.99,
+    "category": "CHUM BURGERS",
+    "item_image": "chumstick.webp"
+  },
+  {
+    "item_name": "CHUM CHILI",
+    "item_description": "Chum fish with special chili",
+    "item_price": 10.00,
+    "category": "CHUM BURGERS",
+    "item_image": "chumchili.webp"
   }
 ]
