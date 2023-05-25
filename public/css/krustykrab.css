@@ -215,14 +215,15 @@ h3 {
     left:20px;
 }
 
-.modalBox{
+.modalBox-kk{
     background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);
     background-size: cover;
     border-width: 10px;
     margin: 10px;
+    min-width: 280px;
     border: 2px solid black;
 }
-.opener{
+.opener-kk{
     background: url('../images/bikinibottom.jpeg') no-repeat;
     background-size: cover;
     border-width: 10px;
@@ -235,11 +236,17 @@ h3 {
     left:20px;
 
 }
+
+.dialog {
+    white-space: pre-wrap;
+}
+
 .ui-dialog {
     background: linear-gradient(#4b83b4, #5a89b2, #aed1ef);
     text-align: center;
     font-size:23px;
     padding:15px;
+    min-width: 300px;
     position:fixed;
 
 }

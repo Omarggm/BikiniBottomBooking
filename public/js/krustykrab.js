@@ -1,57 +1,69 @@
 // lead item is purposely a dummy item not shown on the site to ensure proper targeting
 var menuItems = [
   {
-    name: "PRETTY PATTY SLIDERS x",
+    name: "PRETTY PATTY SLIDERS",
     count: 0,
+    item_price: 1,
   },
   {
-    name: "KRABBY PATTY x",
+    name: "KRABBY PIZZA",
     count: 0,
+    item_price: 11.99,
   },
   {
-    name: "KRABBY PATTY (WITH CHEESE) x",
+    name: "PEAS (IN A CAN) PIE",
     count: 0,
+    item_price: 7.99,
   },
   {
-    name: "KELP FRIES x",
+    name: "KRABBY PATTY (WITH CHEESE)",
     count: 0,
+    item_price: 12.99,
   },
   {
-    name: "KRABBY PIZZA x",
+    name: "SEANUT BRITTLE",
     count: 0,
+    item_price: 7.99,
   },
   {
-    name: "SALAD x",
+    name: "DIET DR. KELP",
     count: 0,
+    item_price: 3.99,
   },
   {
-    name: "PEAS (IN A CAN) PIE x",
+    name: "WATER",
     count: 0,
+    item_price: 1.75,
   },
   {
-    name: "SEANUT BRITTLE x",
+    name: "KELP SHAKE",
     count: 0,
+    item_price: 7.99,
   },
   {
-    name: "DIET DR. KELP x",
+    name: "TEA",
     count: 0,
+    item_price: 7.99,
   },
   {
-    name: "WATER x",
+    name: "SALAD",
     count: 0,
+    item_price: 14.50,
   },
   {
-    name: "KELP SHAKE x",
+    name: "KELP FRIES",
     count: 0,
+    item_price: 5.99,
   },
   {
-    name: "TEA x",
+    name: "KRABBY PATTY",
     count: 0,
+    item_price: 10.99,
   },
 ];
 
 var section = document.querySelector(".style-section");
-var KKopener = document.querySelector(".opener");
+const kkOpener = document.querySelector(".opener-kk");
 var emptyCart = document.querySelector(".empty-cart");
 
 section.addEventListener("click", function (event) {
@@ -80,23 +92,31 @@ section.addEventListener("click", function (event) {
   }
 });
 
-KKopener.addEventListener("click", function () {
+kkOpener.addEventListener("click", function () {
   var listItem = document.querySelector("#dialog ul");
+  var total = 0;
 
   while (listItem.hasChildNodes()) {
     listItem.removeChild(listItem.firstChild);
   }
 
+
   for (var i = 0; i < menuItems.length; i++) {
     var quantity = localStorage.getItem(menuItems[i].name);
+
+    total += (menuItems[i].item_price * menuItems[i].count);
+
+    // prevents weird rounding errors
+    total = Math.round(total * 100) / 100;
 
     if (quantity != null && quantity > 0) {
       var newList = document.createElement("li");
       newList.classList.add("list");
-      newList.textContent = menuItems[i].name + " " + quantity;
+      newList.textContent = menuItems[i].name + ": " + menuItems[i].item_price + " x" + quantity;
       listItem.appendChild(newList);
     }
   }
+  listItem.append("🦀 Total: $" + total);
 });
 
 emptyCart.addEventListener("click", function () {

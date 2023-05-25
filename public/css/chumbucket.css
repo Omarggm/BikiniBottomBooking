@@ -217,11 +217,12 @@ h3 {
 }
 
 .modalBox{
-    background: linear-gradient(0.4turn, #4e4e4e 20%, #d4d4d4 70%, #808080 98%);
+    background: linear-gradient(0.4turn, #4e3c3c 20%, #cfb8b8 70%, #725858 98%);
     background-size: cover;
     border-width: 10px;
     margin: 10px;
     border: 2px solid black;
+    min-width: 280px;
 }
 .cb-opener{
     background: linear-gradient(0.4turn, #4e4e4e 20%, #d4d4d4 70%, #808080 98%);
@@ -237,12 +238,17 @@ h3 {
 
 }
 
+.dialog {
+    white-space: pre-wrap;
+}
+
 .ui-dialog {
     background: linear-gradient(0.4turn, #4e4e4e 20%, #d4d4d4 70%, #808080 98%);
     text-align: center;
     font-size:23px;
     padding:15px;
     position:fixed;
+    min-width: 320px;
 
 }
 
