@@ -31,7 +31,7 @@ Browse the menus, and select items from the various menu options
 
 And checkout your order!
 
-![image](https://github.com/Omarggm/BikiniBottomBooking/assets/123746582/1d721a50-7b90-4012-976f-390977757d18)
+![image](https://github.com/Omarggm/BikiniBottomBooking/assets/123746582/a55b584d-4555-4c86-ba47-f74456464d28)
 
 ### Contributors:
 * ### [Walter Craigie](https://github.com/w4lt0r)
