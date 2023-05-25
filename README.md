@@ -4,6 +4,9 @@
 
 ![image](https://img.shields.io/badge/License-MIT-slateblue.svg)
 
+![image](https://github.com/Omarggm/BikiniBottomBooking/assets/123746582/30f9c223-bf87-4636-a279-f03912f02951)
+
+
 ## Overview
 * Bikini Bottom Booking is a meal ordering application for Bikini Bottom's finest restaurants.
 
@@ -17,25 +20,25 @@ As a team, we learned to work in both separate front end and back end groups and
 * I WANT to order some delicious foor in advance to pick up later
 * SO THAT I spend less time procuring tasty delicious sea food that is MOSTLY made up of other sea creatures.
 
-## Usage
-Sign in, or take a look at the menus directly first if you wish. Also, try hovering  your mouse on the pineapple and/or clicking on it. No reason.
+## Usage & Screenshots
+Sign up, sign in, or take a look at the menus directly first if you wish. Also, try hovering  your mouse on the pineapple and/or clicking on it. No reason.
 
 ![image](https://github.com/Omarggm/BikiniBottomBooking/assets/123746582/54e29f2c-2f17-43f5-907f-f276c9da15c0)
 
 Browse the menus, and select items from the various menu options
 
-![image](https://github.com/Omarggm/BikiniBottomBooking/assets/123746582/b66f16d0-34b1-4ff5-b327-81d5a7d443a6)
+![image](https://github.com/Omarggm/BikiniBottomBooking/assets/123746582/b0c90536-0f82-4a67-894e-57e5bc3ea1f7)
 
 And checkout your order!
 
-![image](https://github.com/Omarggm/BikiniBottomBooking/assets/123746582/93938a72-a35b-4c58-ae0f-bdc91db03349)
+![image](https://github.com/Omarggm/BikiniBottomBooking/assets/123746582/1d721a50-7b90-4012-976f-390977757d18)
 
 ### Contributors:
-* [Walter Craigie](https://github.com/w4lt0r)
-* [Omar Garcia](https://github.com/Omarggm/)
-* [Rosa Garcia](https://github.com/saway11)
-* [Daniel McKay](https://github.com/DanielFMcKay)
-* [Ryan Acevedo Slaughter](https://github.com/rslaughter12)
+* ### [Walter Craigie](https://github.com/w4lt0r)
+* ### [Omar Garcia](https://github.com/Omarggm/)
+* ### [Rosa Garcia](https://github.com/saway11)
+* ### [Dan McKay](https://github.com/DanielFMcKay)
+* ### [Ryan Acevedo Slaughter](https://github.com/rslaughter12)
 
 
 ### Technologies used include:
@@ -53,7 +56,7 @@ And checkout your order!
 ### Deployed Site
 * Heroku link: <a href=https://bbbooking.herokuapp.com>Bikini Bottom Booking Bonanza!!</a>
 
-### License
+## License
 This application is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
 MIT License
