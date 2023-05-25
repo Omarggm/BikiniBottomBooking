@@ -89,7 +89,7 @@ opener.addEventListener("click", function () {
     }
 
   }
-  listItem.append("🦈 Total: $" + total);
+  if (total !== 0) {listItem.append("🦈 Total: $" + total)};
 });
 
 emptyCart.addEventListener("click", function () {
