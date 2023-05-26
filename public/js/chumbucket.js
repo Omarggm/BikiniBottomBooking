@@ -35,6 +35,7 @@ var menuItems = [
 var section = document.querySelector(".style-section");
 var opener = document.querySelector(".cb-opener");
 var emptyCart = document.querySelector(".cb-empty-cart");
+var total = JSON.parse(localStorage.getItem('total'));
 
 section.addEventListener("click", function (event) {
   if (event.target.classList.contains("minus")) {
@@ -43,10 +44,16 @@ section.addEventListener("click", function (event) {
     if (menuItem.count > 0) {
       menuItem.count--;
     }
+    localStorage.getItem("total", total);
+    total = total - menuItem.item_price;
+    total = Math.round(total * 100) / 100;
+
     var textBox = event.target.nextElementSibling;
     textBox.textContent = menuItem.count;
-    console.log("this item count is " + menuItem.count + " " + menuItem.item_name + "(s)");
+    console.log("this item count is " + menuItem.count + " " + menuItem.item_name + "(s)" + " for $" + menuItem.item_price + " each");
     localStorage.setItem(menuItem.item_name, menuItem.count);
+    localStorage.setItem("total", total);
+    console.log("The current total is $" + total);
   }
 
   if (event.target.classList.contains("add")) {
@@ -55,10 +62,19 @@ section.addEventListener("click", function (event) {
     if (menuItem.count < 20) {
       menuItem.count++;
     }
+    localStorage.getItem("total", total);
+    total = total + menuItem.item_price;
+    
+    // to prevent weird rounding errors
+    total = Math.round(total * 100) / 100;
+
     var textBox = event.target.previousElementSibling;
     textBox.textContent = menuItem.count;
     console.log("this item count is " + menuItem.count + " " + menuItem.item_name + "(s) for $" + menuItem.item_price + " each");
     localStorage.setItem(menuItem.item_name, menuItem.count);
+    localStorage.setItem(menuItem.item_name, menuItem.count);
+    localStorage.setItem("total", total);
+    console.log("The current total is $" + total);
   }
 });
 
@@ -66,7 +82,6 @@ section.addEventListener("click", function (event) {
 
 opener.addEventListener("click", function () {
   var listItem = document.querySelector("#dialog ul");
-  // var total = 0;
 
   while (listItem.hasChildNodes()) {
     listItem.removeChild(listItem.firstChild);
@@ -75,21 +90,14 @@ opener.addEventListener("click", function () {
   for (var i = 0; i < menuItems.length; i++) {
     var quantity = localStorage.getItem(menuItems[i].item_name);
 
-
-    // total += (menuItems[i].item_price * menuItems[i].count);
-
-    // prevents weird rounding errors
-    // total = Math.round(total * 100) / 100;
-
     if (quantity != null && quantity > 0) {
       var newList = document.createElement("li");
       newList.classList.add("list");
       newList.textContent = menuItems[i].item_name + " $" + menuItems[i].item_price + " x" + quantity;
       listItem.appendChild(newList);
     }
-
   }
-  // if (total !== 0) {listItem.append("🦈 Total: $" + total)};
+  listItem.append("🦈 Total: $" + total);
 });
 
 emptyCart.addEventListener("click", function () {
