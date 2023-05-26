@@ -67,12 +67,24 @@ const kkOpener = document.querySelector(".opener-kk");
 var emptyCart = document.querySelector(".empty-cart");
 var total = JSON.parse(localStorage.getItem('kk-total'));
 
+const styleBox = document.querySelector(".style-quantity");
+
+counter = document.querySelectorAll(".counter");
+for (var i = 1; i < 12; i++) {
+  var textBox = document.querySelector("#count-box-" + i);
+  var menuItem = menuItems[i];
+  menuItem.count = parseInt(localStorage.getItem(menuItem.name)) || 0;
+  counter.textContent = menuItem.count;
+  console.log("this item count is " + menuItem.count + " " + menuItem.name + "(s) for $" + menuItem.item_price + " each");
+  localStorage.setItem(menuItem.name, menuItem.count);
+  textBox.textContent = menuItem.count;
+}
+
 
 counter = document.querySelectorAll(".counter");
 for (var i = 1; i < 12; i++) {
   var menuItem = menuItems[i];
   menuItem.count = parseInt(localStorage.getItem(menuItem.name)) || 0;
-  // var textBox = document.querySelector(".item-" + i + " .count");
   counter.textContent = menuItem.count;
   console.log("this item count is " + menuItem.count + " " + menuItem.name + "(s) for $" + menuItem.item_price + " each");
   localStorage.setItem(menuItem.name, menuItem.count);
