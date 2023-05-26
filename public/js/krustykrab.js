@@ -65,6 +65,7 @@ var menuItems = [
 var section = document.querySelector(".style-section");
 const kkOpener = document.querySelector(".opener-kk");
 var emptyCart = document.querySelector(".empty-cart");
+var total = JSON.parse(localStorage.getItem('kk-total'));
 
 section.addEventListener("click", function (event) {
   if (event.target.classList.contains("minus")) {
@@ -72,23 +73,33 @@ section.addEventListener("click", function (event) {
     var menuItem = menuItems[index];
     if (menuItem.count > 0) {
       menuItem.count--;
+      localStorage.getItem("total", total);
+      total = total - menuItem.item_price;
+      total = Math.round(total * 100) / 100;      
     }
     var textBox = event.target.nextElementSibling;
     textBox.textContent = menuItem.count;
-    console.log("this item count is " + menuItem.count + " " + menuItem.name + "(s)");
+    console.log("this item count is " + menuItem.count + " " + menuItem.name + "(s) for $" + menuItem.item_price + " each");
     localStorage.setItem(menuItem.name, menuItem.count);
+    localStorage.setItem("kk-total", total);
+    console.log("The current total is $" + total);
   }
+
 
   if (event.target.classList.contains("add")) {
     var index = event.target.dataset.number;
     var menuItem = menuItems[index];
     if (menuItem.count < 20) {
       menuItem.count++;
+      localStorage.getItem("kk-total", total);
+      total = total + menuItem.item_price;
+      total = Math.round(total * 100) / 100;      
     }
     var textBox = event.target.previousElementSibling;
     textBox.textContent = menuItem.count;
-    console.log("this item count is " + menuItem.count + " " + menuItem.name + "(s)");
+    console.log("this item count is " + menuItem.count + " " + menuItem.name + "(s) for $" + menuItem.item_price + " each");
     localStorage.setItem(menuItem.name, menuItem.count);
+    console.log("The current total is $" + total);
   }
 });
 
@@ -122,7 +133,7 @@ kkOpener.addEventListener("click", function () {
   //   total += localStorage.getItem(menuItems[i].item_price * menuItems[i].count);
   // }
   // console.log("total is $" + total);
-  // if (total > 0 ) {totalPrice.append("🦀 Total: $" + total)};
+  if (total > 0 ) {listItem.append("🦀 Total: $" + total)};
 });
 // let total = 0;
 
