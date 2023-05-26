@@ -12,8 +12,13 @@
     src: url("../fonts/STL.woff2");
 }
 body{
-    background-color: rgba(157, 29, 29, 0.927);
     font-family: SomeTimeLater;
+}
+
+.cb-background {
+    background-color: rgba(157, 29, 29, 0.927);
+    height: 100%;
+    padding-top: 1px;
 }
 
 .chumHeader {

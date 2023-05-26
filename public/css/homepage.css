@@ -3,10 +3,8 @@ html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.bgImage {
+body {
     background-size: cover;
-    min-height: 70rem;
-    width: 100%;
     background-image: url("../images/frontpage_bg2c.png");
 }
 
