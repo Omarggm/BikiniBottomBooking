@@ -37,6 +37,16 @@ var opener = document.querySelector(".cb-opener");
 var emptyCart = document.querySelector(".cb-empty-cart");
 var total = JSON.parse(localStorage.getItem('total'));
 
+counter = document.querySelectorAll(".counter");
+for (var i = 1; i < 5; i++) {
+  var menuItem = menuItems[i];
+  menuItem.count = parseInt(localStorage.getItem(menuItem.item_name)) || 0;
+  // var textBox = document.querySelector(".item-" + i + " .count");
+  counter.textContent = menuItem.count;
+  console.log("this item count is " + menuItem.count + " " + menuItem.item_name + "(s) for $" + menuItem.item_price + " each");
+  localStorage.setItem(menuItem.item_name, menuItem.count);
+}
+
 
 section.addEventListener("click", function (event) {
   if (event.target.classList.contains("minus")) {
