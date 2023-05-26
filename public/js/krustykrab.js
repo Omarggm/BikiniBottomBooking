@@ -67,6 +67,9 @@ const kkOpener = document.querySelector(".opener-kk");
 var emptyCart = document.querySelector(".empty-cart");
 var total = JSON.parse(localStorage.getItem('kk-total'));
 
+
+
+
 section.addEventListener("click", function (event) {
   if (event.target.classList.contains("minus")) {
     var index = event.target.dataset.number;
@@ -75,7 +78,7 @@ section.addEventListener("click", function (event) {
       menuItem.count--;
       localStorage.getItem("total", total);
       total = total - menuItem.item_price;
-      total = Math.round(total * 100) / 100;      
+      total = Math.round(total * 100) / 100;
     }
     var textBox = event.target.nextElementSibling;
     textBox.textContent = menuItem.count;
@@ -93,12 +96,13 @@ section.addEventListener("click", function (event) {
       menuItem.count++;
       localStorage.getItem("kk-total", total);
       total = total + menuItem.item_price;
-      total = Math.round(total * 100) / 100;      
+      total = Math.round(total * 100) / 100;
     }
     var textBox = event.target.previousElementSibling;
     textBox.textContent = menuItem.count;
     console.log("this item count is " + menuItem.count + " " + menuItem.name + "(s) for $" + menuItem.item_price + " each");
     localStorage.setItem(menuItem.name, menuItem.count);
+    localStorage.setItem("kk-total", total);
     console.log("The current total is $" + total);
   }
 });
@@ -107,7 +111,6 @@ section.addEventListener("click", function (event) {
 // f
 kkOpener.addEventListener("click", function () {
   var listItem = document.querySelector("#dialog ul");
-  // var total = 0;
 
   while (listItem.hasChildNodes()) {
     listItem.removeChild(listItem.firstChild);
@@ -117,11 +120,6 @@ kkOpener.addEventListener("click", function () {
   for (var i = 0; i < menuItems.length; i++) {
     var quantity = localStorage.getItem(menuItems[i].name);
 
-    // total += (menuItems[i].item_price * menuItems[i].count);
-
-    // prevents weird rounding errors
-    // total = Math.round(total * 100) / 100;
-
     if (quantity != null && quantity > 0) {
       var newList = document.createElement("li");
       newList.classList.add("list");
@@ -129,14 +127,9 @@ kkOpener.addEventListener("click", function () {
       listItem.appendChild(newList);
     }
   }
-  // for (var i = 0; i < menuItems.length; i++) {
-  //   total += localStorage.getItem(menuItems[i].item_price * menuItems[i].count);
-  // }
-  // console.log("total is $" + total);
-  if (total > 0 ) {listItem.append("🦀 Total: $" + total)};
-});
-// let total = 0;
 
+  if (total > 0) { listItem.append("🦀 Total: $" + total) };
+});
 
 
 emptyCart.addEventListener("click", function () {

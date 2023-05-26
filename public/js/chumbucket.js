@@ -37,16 +37,18 @@ var opener = document.querySelector(".cb-opener");
 var emptyCart = document.querySelector(".cb-empty-cart");
 var total = JSON.parse(localStorage.getItem('total'));
 
+
 section.addEventListener("click", function (event) {
   if (event.target.classList.contains("minus")) {
     var index = event.target.dataset.number;
     var menuItem = menuItems[index];
     if (menuItem.count > 0) {
       menuItem.count--;
+
+      localStorage.getItem("total", total);
+      total = total - menuItem.item_price;
+      total = Math.round(total * 100) / 100;
     }
-    localStorage.getItem("total", total);
-    total = total - menuItem.item_price;
-    total = Math.round(total * 100) / 100;
 
     var textBox = event.target.nextElementSibling;
     textBox.textContent = menuItem.count;
@@ -61,13 +63,13 @@ section.addEventListener("click", function (event) {
     var menuItem = menuItems[index];
     if (menuItem.count < 20) {
       menuItem.count++;
-    }
-    localStorage.getItem("total", total);
-    total = total + menuItem.item_price;
-    
-    // to prevent weird rounding errors
-    total = Math.round(total * 100) / 100;
 
+      localStorage.getItem("total", total);
+      total = total + menuItem.item_price;
+
+      // to prevent weird rounding errors
+      total = Math.round(total * 100) / 100;
+    }
     var textBox = event.target.previousElementSibling;
     textBox.textContent = menuItem.count;
     console.log("this item count is " + menuItem.count + " " + menuItem.item_name + "(s) for $" + menuItem.item_price + " each");
