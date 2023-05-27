@@ -79,6 +79,7 @@ const loginBtn = document.querySelectorAll(".login-button")[0];
 
 
 
+// sign-up stuff directly below
 
 //Omars version of the above function
 const submitButton = document.querySelector('.sign-up-submit-btn');
@@ -117,7 +118,8 @@ submitButton.addEventListener('click', async () => {
       },
       body: JSON.stringify(userData)
     });
-    if (response.ok) { alert("Sign up successful! Please sign in! ⚓") };
+    if (!response.ok) { alert("Sorry, email already in use 🦈") 
+    } else if (response.ok) { alert("Sign up successful! Please sign in! ⚓") };
     // Handle the response as needed
     const responseData = await response.json();
     console.log(responseData);
@@ -167,6 +169,8 @@ loginBtn.addEventListener("click", function () {
     attemptLogin(loginEmail, loginPassword);
   }
 });
+
+// below is replaced by a function above
 
 // signUpSubmitBtn.addEventListener("click", function () {
 //   const signUpUsername = $(".sign-up-username-field").val();
