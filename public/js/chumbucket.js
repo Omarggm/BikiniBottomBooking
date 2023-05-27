@@ -44,7 +44,7 @@ for (var i = 1; i < 6; i++) {
   var menuItem = menuItems[i];
   menuItem.count = parseInt(localStorage.getItem(menuItem.item_name)) || 0;
   counter.textContent = menuItem.count;
-  console.log("this item count is " + menuItem.count + " " + menuItem.item_name + "(s) for $" + menuItem.item_price + " each");
+  // console.log("this item count is " + menuItem.count + " " + menuItem.item_name + "(s) for $" + menuItem.item_price + " each");
   localStorage.setItem(menuItem.item_name, menuItem.count);
   textBox.textContent = menuItem.count;
 }
