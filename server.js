@@ -16,7 +16,7 @@ app.engine('handlebars', hbs.engine);
 const sessionConfig = { 
   secret: 'secret',
   cookie: {
-    maxAge: 300000,
+    maxAge: 14400000,
     httpOnly: true,
     secure: false,
     sameSite: 'strict',
@@ -37,7 +37,6 @@ const PORT = process.env.PORT || 3001;
 
 
 app.set('view engine', 'handlebars');
-
 // Express middleware
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: true}));

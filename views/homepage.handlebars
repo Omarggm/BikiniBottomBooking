@@ -19,6 +19,9 @@
             <h1>Hidden Text</h1>
         </div>
         <h1 class="frontpage-title" onclick="sadSong()">Bikini Bottom<br>Booking Bonanza!!!</h1>
+    {{#if logged_in}}
+    <h3 class="logged-in-confirm">Logged In Test for {{this.user_id}}</h3>
+    {{/if}}
 
         <div class="frontpage-input-tile">
             <div class="input-fields-column">
