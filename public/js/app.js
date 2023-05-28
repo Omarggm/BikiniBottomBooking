@@ -82,14 +82,19 @@ const loginBtn = document.querySelectorAll(".login-button")[0];
 // sign-up stuff directly below
 
 //Omars version of the above function
-const submitButton = document.querySelector('.sign-up-submit-btn');
+const signUpSubmitButton = document.querySelector('.sign-up-submit-btn');
 
 
-submitButton.addEventListener('click', async () => {
+signUpSubmitButton.addEventListener('click', async () => {
   // Get the input field values
   const usernameInput = document.querySelector('.sign-up-username-field');
   const emailInput = document.querySelector('.sign-up-email-field');
   const passwordInput = document.querySelector('.sign-up-password-field');
+
+  emailInput.value = emailInput.value.trim();
+  emailInput.value = emailInput.value.toLowerCase();
+  passwordInput.value = passwordInput.value.trim();
+
 
   // Create a data object with the input values
   const userData = {
@@ -118,7 +123,8 @@ submitButton.addEventListener('click', async () => {
       },
       body: JSON.stringify(userData)
     });
-    if (!response.ok) { alert("Sorry, email already in use 🦈") 
+    if (!response.ok) {
+      alert("Sorry, email already in use 🦈")
     } else if (response.ok) { alert("Sign up successful! Please sign in! ⚓") };
     // Handle the response as needed
     const responseData = await response.json();
@@ -133,8 +139,11 @@ submitButton.addEventListener('click', async () => {
 
 // attemptLogin function sends a POST request to the server to check if the user exists
 const attemptLogin = async () => {
-  const email = $(".login-field").val();
-  const password = $(".password-field").val();
+  var email = $(".login-field").val();
+  var password = $(".password-field").val();
+  email = email.trim();
+  email = email.toLowerCase();
+  password = password.trim();
 
   if (email && password) {
     const loginResponse = await fetch("/api/users/login", {
@@ -147,8 +156,8 @@ const attemptLogin = async () => {
 
       frontPageTile.style.display = "none";
       aligner.style.display = "none";
-      $(".decider").html("<h3 class='logged-in-confirm'>You Are Logged In!</h3><br><p class='login-note'>" + 
-      "Please Look Forward To Our Many Specials, Local Business Promotions, and Bikinicoin Opportunities In Your Email!!</p>");
+      $(".decider").html("<h3 class='logged-in-confirm'>You Are Logged In!</h3><br><p class='login-note'>" +
+        "Please Look Forward To Our Many Specials, Local Business Promotions, and Bikinicoin Opportunities In Your Email!!</p>");
 
       console.log("login successful");
     } else {
@@ -197,5 +206,34 @@ const logout = async () => {
     alert("You aren't actually logged in, sir 🦈");
   }
 };
+
+
+let password = document.querySelector(".password-field");
+
+password.addEventListener("keypress", function (event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Trigger the button element with a click
+    loginBtn.click();
+  }
+});
+
+let passwordInput = document.querySelector(".sign-up-password-field");
+
+passwordInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    signUpSubmitButton.click();
+  }
+});
+
+// Closes sign-up modal with Escape key if in password field specifically
+$('.sign-up-password-field').keydown(function (event) {
+  if (event.key === 'Escape') {
+    signUpTile.style.display = "none";
+  }
+});
+
+
+
 
 document.querySelector(".logoutBtn").addEventListener("click", logout);
