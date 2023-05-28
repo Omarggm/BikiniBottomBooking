@@ -14,7 +14,7 @@ app.engine('handlebars', hbs.engine);
 
 
 const sessionConfig = { 
-  secret: 'secret',
+  secret: 'is mayonnaise an instrument?',
   cookie: {
     maxAge: 14400000,
     httpOnly: true,
