@@ -3,15 +3,21 @@ const { krustyMenu, chumMenu } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
+
+
     console.log("homepage");
     res.render("homepage", {
+
+      logged_in: req.session.logged_in,
       title: "Bikini Bottom Booking Bonanza!!!",
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-// loggedIn: req.session.loggedIn
+
+
+// logged_in: req.session.logged_in
 router.get("/krustykrab", async (req, res) => {
   try {
     // const menuItems = [];
@@ -20,7 +26,7 @@ router.get("/krustykrab", async (req, res) => {
     res.render("krustykrab", {
       title: "Krusty Krab",
       menuItems: menu,
-      loggedIn: req.session.loggedIn,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -34,7 +40,7 @@ router.get("/chumbucket", async (req, res) => {
     res.render("chumbucket", {
       title: "Chum Bucket",
       menuItems: menu,
-      loggedIn: req.session.loggedIn,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -45,7 +51,7 @@ router.get("/checkout", async (req, res) => {
   try {
     res.render("checkout", {
       title: "Galley Grub Checkout",
-      loggedIn: req.session.loggedIn,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);

@@ -14,9 +14,10 @@ app.engine('handlebars', hbs.engine);
 
 
 const sessionConfig = { 
-  secret: 'is mayonnaise an instrument?',
+  secret: 'is mayonnaise an instrument',
   cookie: {
-    maxAge: 14400000,
+    // maxAge is two hours
+    maxAge: 7200000,
     httpOnly: true,
     secure: false,
     sameSite: 'strict',

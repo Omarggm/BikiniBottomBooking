@@ -46,13 +46,18 @@ body {
     color: #afdbda;
 }
 
+.logged-in-disconfirm:hover {
+    color: #f0feff;
+    text-shadow: 0 0 1px #e5f0b3, 0 0 2px #e5f0b3, 0 0 3px #e5f0b3;
+}
+
 
 .logged-in-confirm {
     text-align: center;
     font-family: Courgette, Arial, Helvetica, sans-serif;
     color: #e2eead;
     font-size: 1.4rem;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     text-shadow: 0 0 1px #e5f0b3, 0 0 2px #e5f0b3, 0 0 3px #e5f0b3;
     animation: appear 5s ease forwards;
 }
@@ -63,7 +68,7 @@ body {
     color: #efefef;
     font-weight: 200;
     font-size: 1rem;
-    margin-top: -4.75rem;
+    margin-top: -3rem;
     text-shadow: 2px 2px 2px rgb(114, 124, 130);
     animation: appear 10s ease forwards;
 }
