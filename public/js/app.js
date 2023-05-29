@@ -154,12 +154,13 @@ const attemptLogin = async () => {
 
     if (loginResponse.ok) {
 
-      frontPageTile.style.display = "none";
-      aligner.style.display = "none";
-      $(".decider").html("<h3 class='logged-in-confirm'>You Are Logged In!</h3><br><p class='login-note'>" +
-        "Please Look Forward To Our Many Specials, Local Business Promotions, and Bikinicoin Opportunities In Your Email!!</p>");
+      // frontPageTile.style.display = "none";
+      // aligner.style.display = "none";
+      // $(".decider").html("<h3 class='logged-in-confirm'>You Are Logged In!</h3><br><p class='login-note'>" +
+      //   "Please Look Forward To Our Many Specials, Local Business Promotions, and Bikinicoin Opportunities In Your Email!!</p>");
 
       console.log("login successful");
+      document.location.reload();
     } else {
       alert("sign in failed, please try again 🦈");
     }

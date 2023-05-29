@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const bcrypt = require('bcrypt');
 const { User } = require('../../models');
 
 router.get('/', async (req, res) => {
@@ -15,6 +14,13 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      console.log("logged in via post route X");
+    });
+
     res.status(200).json(userData);
     console.log(userData);
   } catch (error) {
@@ -72,6 +78,7 @@ router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
+      console.log("logged out via post route");
     });
   } else {
     res.status(404).end();
